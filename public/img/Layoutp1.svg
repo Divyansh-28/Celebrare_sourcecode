@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="79.867" height="60" viewBox="0 0 79.867 60">
+  <g id="Layoutp1" transform="translate(-3935 -821)">
+    <g id="Rectangle_188" data-name="Rectangle 188" transform="translate(3935 821)" fill="none" stroke="#707070" stroke-width="1">
+      <rect width="79.867" height="59.9" stroke="none"/>
+      <rect x="0.5" y="0.5" width="78.867" height="58.9" fill="none"/>
+    </g>
+    <line id="Line_29" data-name="Line 29" y2="59.9" transform="translate(3975.033 821.1)" fill="none" stroke="#707070" stroke-width="1"/>
+    <path id="image-outline_1_" data-name="image-outline (1)" d="M20.748,20.748H5.219V5.219h15.53m0-2.219H5.219A2.219,2.219,0,0,0,3,5.219v15.53a2.219,2.219,0,0,0,2.219,2.219h15.53a2.219,2.219,0,0,0,2.219-2.219V5.219A2.219,2.219,0,0,0,20.748,3M15.158,13.305l-3.05,3.927L9.933,14.614,6.882,18.53h12.2Z" transform="translate(3943.78 830.978)" fill="#707070"/>
+    <g id="text" transform="translate(3942.189 860.766)">
+      <line id="Line_30" data-name="Line 30" x2="28.951" transform="translate(0 0)" fill="none" stroke="#707070" stroke-width="2"/>
+      <line id="Line_31" data-name="Line 31" x2="25.956" transform="translate(0.998 4.992)" fill="none" stroke="#707070" stroke-width="2"/>
+      <line id="Line_32" data-name="Line 32" x2="21.962" transform="translate(2.995 9.983)" fill="none" stroke="#707070" stroke-width="2"/>
+    </g>
+    <path id="image-outline_1_2" data-name="image-outline (1)" d="M20.748,20.748H5.219V5.219h15.53m0-2.219H5.219A2.219,2.219,0,0,0,3,5.219v15.53a2.219,2.219,0,0,0,2.219,2.219h15.53a2.219,2.219,0,0,0,2.219-2.219V5.219A2.219,2.219,0,0,0,20.748,3M15.158,13.305l-3.05,3.927L9.933,14.614,6.882,18.53h12.2Z" transform="translate(3981.917 830.978)" fill="#707070"/>
+    <g id="text-2" data-name="text" transform="translate(3980.326 860.766)">
+      <line id="Line_30-2" data-name="Line 30" x2="28.951" transform="translate(0 0)" fill="none" stroke="#707070" stroke-width="2"/>
+      <line id="Line_31-2" data-name="Line 31" x2="25.956" transform="translate(0.998 4.992)" fill="none" stroke="#707070" stroke-width="2"/>
+      <line id="Line_32-2" data-name="Line 32" x2="21.962" transform="translate(2.995 9.983)" fill="none" stroke="#707070" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

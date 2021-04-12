@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="48" viewBox="0 0 144 48">
+  <g id="Layoutl2" transform="translate(-4166 -906)">
+    <path id="image-outline_1_" data-name="image-outline (1)" d="M29.667,29.667H6.333V6.333H29.667m0-3.333H6.333A3.333,3.333,0,0,0,3,6.333V29.667A3.333,3.333,0,0,0,6.333,33H29.667A3.333,3.333,0,0,0,33,29.667V6.333A3.333,3.333,0,0,0,29.667,3m-8.4,15.483-4.583,5.9L13.417,20.45,8.833,26.333H27.167Z" transform="translate(4241 912)" fill="#707070"/>
+    <path id="image-outline_1_2" data-name="image-outline (1)" d="M29.667,29.667H6.333V6.333H29.667m0-3.333H6.333A3.333,3.333,0,0,0,3,6.333V29.667A3.333,3.333,0,0,0,6.333,33H29.667A3.333,3.333,0,0,0,33,29.667V6.333A3.333,3.333,0,0,0,29.667,3m-8.4,15.483-4.583,5.9L13.417,20.45,8.833,26.333H27.167Z" transform="translate(4169 912)" fill="rgba(0,0,0,0.76)"/>
+    <g id="Group_53" data-name="Group 53" transform="translate(-5 94)">
+      <g id="Rectangle_192" data-name="Rectangle 192" transform="translate(4171 812)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="144" height="48" stroke="none"/>
+        <rect x="0.5" y="0.5" width="143" height="47" fill="none"/>
+      </g>
+      <line id="Line_60" data-name="Line 60" y2="47" transform="translate(4243.5 812.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    </g>
+    <g id="Group_59" data-name="Group 59">
+      <line id="Line_70" data-name="Line 70" x2="27" transform="translate(4206.5 924.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_71" data-name="Line 71" x2="27" transform="translate(4206.5 930.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_72" data-name="Line 72" x2="27" transform="translate(4206.5 936.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_73" data-name="Line 73" x2="27" transform="translate(4206.5 942.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_74" data-name="Line 74" x2="27" transform="translate(4206.5 918.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    </g>
+    <g id="Group_60" data-name="Group 60" transform="translate(73)">
+      <line id="Line_70-2" data-name="Line 70" x2="27" transform="translate(4206.5 924.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_71-2" data-name="Line 71" x2="27" transform="translate(4206.5 930.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_72-2" data-name="Line 72" x2="27" transform="translate(4206.5 936.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_73-2" data-name="Line 73" x2="27" transform="translate(4206.5 942.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_74-2" data-name="Line 74" x2="27" transform="translate(4206.5 918.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    </g>
+    <path id="image-outline_1_3" data-name="image-outline (1)" d="M29.667,29.667H6.333V6.333H29.667m0-3.333H6.333A3.333,3.333,0,0,0,3,6.333V29.667A3.333,3.333,0,0,0,6.333,33H29.667A3.333,3.333,0,0,0,33,29.667V6.333A3.333,3.333,0,0,0,29.667,3m-8.4,15.483-4.583,5.9L13.417,20.45,8.833,26.333H27.167Z" transform="translate(4169 912)" fill="#707070"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="48" viewBox="0 0 144 48">
+  <g id="Layoutl4" transform="translate(-4154 -1028)">
+    <g id="Group_51" data-name="Group 51" transform="translate(-17 216)">
+      <g id="Rectangle_192" data-name="Rectangle 192" transform="translate(4171 812)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="144" height="48" stroke="none"/>
+        <rect x="0.5" y="0.5" width="143" height="47" fill="none"/>
+      </g>
+      <line id="Line_60" data-name="Line 60" y2="47" transform="translate(4243.5 812.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    </g>
+    <path id="image-outline_1_" data-name="image-outline (1)" d="M38.556,38.556H7.444V7.444H38.556m0-4.444H7.444A4.444,4.444,0,0,0,3,7.444V38.556A4.444,4.444,0,0,0,7.444,43H38.556A4.444,4.444,0,0,0,43,38.556V7.444A4.444,4.444,0,0,0,38.556,3m-11.2,20.644-6.111,7.867-4.356-5.244-6.111,7.844H35.222Z" transform="translate(4166 1029)" fill="#707070"/>
+    <g id="Group_55" data-name="Group 55" transform="translate(-5 184)">
+      <line id="Line_61" data-name="Line 61" x2="58" transform="translate(4238.5 853.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_62" data-name="Line 62" x2="58" transform="translate(4238.5 883.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_63" data-name="Line 63" x2="58" transform="translate(4238.5 877.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_64" data-name="Line 64" x2="58" transform="translate(4238.5 871.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_65" data-name="Line 65" x2="58" transform="translate(4238.5 865.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_66" data-name="Line 66" x2="58" transform="translate(4238.5 859.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Celebrare</title>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Caveat:wght@700&family=Dancing+Script&family=Fjalla+One&family=Handlee&family=Indie+Flower&family=Italianno&family=Kalam:wght@300&family=Lato:wght@100&family=Lora&family=Pacifico&family=Poppins:wght@300&family=Roboto:wght@100&family=Sacramento&family=Satisfy&family=Seaweed+Script&family=Slabo+13px&family=Ubuntu:wght@300&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Alex+Brush&family=Allura&family=Arizonia&family=Bonbon&family=Bungee+Inline&family=Finger+Paint&family=Great+Vibes&family=Henny+Penny&family=Lovers+Quarrel&family=Meddon&family=Miss+Fajardose&family=Molle:ital@1&family=Monsieur+La+Doulaise&family=Mountains+of+Christmas:wght@700&family=Pacifico&family=Parisienne&family=Quicksand:wght@700&family=Ribeye+Marrow&family=Rouge+Script&family=Sail&family=Vast+Shadow&family=Yesteryear&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"/>
+
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <link type="text/css" rel="stylesheet" href="../css/footer.css" />
+    <link type="text/css" rel="stylesheet" href="../css/ecardEditorPage.css" />
+
+    <!-- bootstrap-4.3 -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- bootstrap-4.3 -->
+
+    <!-- firebase -->
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-messaging.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+    <!-- firebase -->
+
+    <link rel="icon" href="../img/LOGO5.svg">
+
+  </head>
+
+  <body>
+    <div style="width: 100%;height: fit-content;">
+
+      <div class="ecard-preview-screen" id="ecard-preview-screen">
+          <div id="control-bar">
+            <a>
+              <span id="continue-button">
+                  CONTINUE
+              </span>
+            </a>
+            <span>
+              <i class="fa fa-times" id="hide-ecard-preview-screen"></i>
+            </span>
+          </div>
+          <div id="preview-screen-loader-container" style="width: 100%;height: 90vh;display: flex;justify-content: center;align-items: center;">
+            <div id="loader"></div>
+          </div>
+          <div id="preview-ecard-image">
+          </div>
+      </div>
+
+      <div class="container-fluid" style="background-color: #f9f9fb;"> 
+        <div class="row header" >
+          <div class="col-6">
+            <div class="logo-container">
+              <img src="../img/BottomLogo.png" alt="" class="logo-image">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="preview-button-container" >
+              <div class="preview-button" id="Preview-Ecard-Image-Button">
+                Preview
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="editing-screen">
+        <div class="row" style="width: 100%;height: 100%;margin: 0;">
+          <div class="col-md-9 p-0 pr-sm-5 pl-sm-5" style="margin-top: 20px;">
+            <div class="div4-wrapper">
+              <div id="loader-container" style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;">
+                <div id="loader-1"></div>
+                </div>
+                <div id="capture-card-image">
+                  <div id="div4">
+                    <img
+                      id="card-default-image"
+                      alt="card-image"
+                      draggable="false"
+                      src=""
+                    >
+                    <img src="../img/BottomLogo.png" alt="" id="watermark">
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-3 pr-0" style="margin:0;">
+            <div id="tools-wrapper">
+              <div class="desktop-view-tool-box">
+                <div class="tool-add-text">
+                  <div class="add-text-icon">
+                    <img src="../img/addtextsvg.svg" alt="" >
+                  </div>
+                  Add Text
+                </div>
+                <div class="tool-add-image">
+                  <label for="image-input">
+                    <div class="add-image-icon">
+                      <img src="../img/image-plus.svg" alt="">
+                    </div>
+                    Add Image
+                  </label>
+                  <input id="image-input" type="file" accept="image/*" style="display: none;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+              
+    </div>
+
+    <div class="mobile-view-tool-box">
+      <div class="mobile-view-tool-box-1">
+            <div class="mobile-view-tool-add-text">
+              <img src="../img/addtextsvg.svg" alt="" >
+              Add Text
+            </div>
+            <div class="mobile-view-tool-add-image">
+              <label for="mobile-view-image-input" style="display: flex;flex-direction: column;justify-content: center;align-items: center;width: 100%;height: 100%;margin:0">
+                <img src="../img/image-plus.svg" alt="">
+                Add Image
+              </label>
+                <input id="mobile-view-image-input" type="file" accept="image/*" style="display: none;"/>
+            </div>
+      <!-- </div> -->
+      </div>
+      <div class="mobile-view-tool-box-2">
+            <div class="mobile-view-tool-resize-text mobile-view-editor-tools">
+              <img src="../img/resize.svg" alt="" >
+              Size
+            </div>
+            <div class="mobile-view-tool-font-text mobile-view-editor-tools">
+                <img src="../img/format-font.svg" alt="">
+                Font
+            </div>
+            <div class="mobile-view-tool-color-text mobile-view-editor-tools">
+                <img src="../img/palette.svg" alt="">
+                Color
+            </div>
+            <div class="mobile-view-tool-align-text mobile-view-editor-tools">
+                <img src="../img/format-align-center.svg" alt="">
+                Align
+            </div>
+            <div class="mobile-view-tool-position-text mobile-view-editor-tools">
+                <img src="../img/position.svg" alt="" style="width: 21px;height: 21px;">
+                Shift
+            </div>
+      </div>
+      <div class="mobile-view-tool-box-3">
+            <div class="mobile-view-tool-resize-image mobile-view-editor-tools">
+              <img src="../img/resize.svg" alt="" >
+              Resize
+            </div>
+            <div class="mobile-view-tool-position-image mobile-view-editor-tools">
+              <img src="../img/position.svg" alt="" style="width: 21px;height: 21px;">
+              Shift
+            </div>
+            <!-- <div class="mobile-view-tool-edit-image mobile-view-editor-tools">
+              <img src="../img/image-edit-outline.svg" alt="">
+              Edit Image
+            </div> -->
+      </div>
+    </div>
+
+  <!-- <div class="addthis_inline_share_toolbox"></div> -->
+  <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ee72ddefbdb0c8f"></script> -->
+
+  <script type="text/javascript" src="../js/lottie.js"></script>
+  <script type="text/javascript" src="../js/firebaseUtils.js" ></script>
+  <script type="text/javascript" src="../js/loader.js" ></script>
+  <script type="text/javascript" src="../js/ecardEditorPage.js"></script>
+
+
+  <!-- interact.js -->
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+  <!-- dom-to-image   -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+</body>
+</html>

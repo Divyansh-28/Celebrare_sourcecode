@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Celebrare</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Playfair+Display:wght@600&family=Satisfy&display=swap" rel="stylesheet">
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <link type="text/css" rel="stylesheet" href="../css/footer.css" />
+    <link type="text/css" rel="stylesheet" href="../css/login.css" />
+    <link type="text/css" rel="stylesheet" href="../css/previewPage.css" />
+
+
+    <!-- bootstrap-4.3 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap-4.3 -->
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <link rel="icon" href="../img/LOGO5.svg">
+    
+    <style>
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      .card-wrapper{
+          width: 90%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          padding: 5px;
+      }
+
+      .card-wrapper > img{
+          width: 100%;
+          height: 90%;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px #666;
+          display: none;
+          cursor: pointer;
+      }
+
+      html::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  html::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  @media screen and (max-width: 882px) {
+  .jumboron {
+    height: 80vh;
+  
+  }
+}
+
+@media screen and (min-width: 883px) {
+  .jumboron {
+    height: 40vh;
+  
+  }
+}
+
+@media(max-width:590px){
+  .card-wrapper{
+    width: 100%;
+    padding: 0;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+
+    <div class="login_main_display" style="position: fixed;">
+      <div class="login_page">
+        <div class="left_block">
+          <span id="welcome"> Welcome </span>
+          <span id="tagline"> We love our users</span>
+        </div>
+        <div class="right_block">
+            <div id="close-login-popup">
+              <i class="fa fa-times" id="close-sharing-option-popup-container"></i>
+            </div>
+          <div class="social_login">
+            <div class="logo-container">
+              <img src="../img/celebrare-logo.svg" alt="" />
+              <span>Celebrare</span>
+            </div>
+            <div class="button-container">
+              <div id="googleLogIn">
+                <img src="../img/gogle.svg" alt="" id="google-icon" />
+                Continue with Google
+              </div>
+              <div id="facebookLogIn">
+                <img src="../img/facebook.svg" alt="" id="facebook-icon" />
+                Continue with Facebook
+              </div>
+            </div>
+          </div>
+          <span id="tagline" class="d-flex d-lg-none"> We love our users</span>
+        </div>
+      </div>
+    </div>
+    
+    <section class="card-preview-popup">
+      <section class="subcategory-cards-container">
+        <div class="container-fluid" >
+          <div class="row">
+            <div class="container-fluid w-100" style="display: flex;justify-content: center;align-items: center;">
+              <div id="card-preview-popup-loader-container" style="width: 100%;height: 636.69px;display: flex;justify-content: center;align-items: center;">
+                <div id="card-preview-popup-loader">
+                </div>
+              </div>
+              <div class="preview-page-container">
+                <div class="row m-0 w-100" >
+                  <div class="col-12">
+                    <div id="card-preview-popup-close-button-container">
+                      <i class="fa fa-times" id="card-preview-popup-close-button"></i>
+                    </div>
+                  </div>  
+                  <div class="col-md-7">
+                    <div class="preview-page-card-image-holder">
+                    </div>
+                  </div>
+                  <div class="col-md-5 px-0">
+                    <div class="preview-page-card-details-container">
+                      <div class="preview-page-card-details">
+                        <div class="preview-page-card-name d-none d-md-flex">
+                          <div class="preview-page-card-title"></div>
+                          <div class="preview-page-card-alt"></div>
+                        </div>
+                        <div class="preview-page-card-edit-buttons">
+                          <a href="" id="ecard-editor-button">
+                            <div class="show-all-categories-btn">
+                              <img src="..\img\ecard_mockup.jpg" alt="">
+                              <span>Make E-Card</span>
+                            </div>
+                          </a>
+                          <a href="" id="gcard-editor-button">
+                            <div class="show-all-categories-btn">
+                              <img src="..\img\gcard_mockup.jpg" alt="">
+                              <span>Make Greeting Card</span>
+                            </div>
+                          </a>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+        </div> 
+      </section>
+    </section>
+
+    <header class="hello1" >
+      <nav class="navbar  navbar-expand-sm navbar-light" style="background-color: white ; box-shadow: 0 2px 10px -5px rgba(0, 0, 0, 0.3);">
+          <div class="container-fluid">
+              
+              <div class="d-none d-sm-block">    
+              <a href="../index.html" class="navbar-brand" id="navbar-brand">
+                  <img src="../img/LOGO5.svg" alt="logo" height="70" width="70" style="padding-left:  5% ; padding-right: 3% ;" >
+              </a>
+          </div>
+
+          <div class="d-block d-sm-none">    
+              <a class="navbar-brand" id="navbar-brand">
+                  <img src="../img/BottomLogo.png" alt="logo" height="53.99" width="130" style="padding-left:  5% ; padding-right: 3% ;" >
+              </a>
+          </div>
+
+          <button class="navbar-toggler navbar-toggler-button" type="button" data-toggle="collapse" data-target="#Navbar" id="toggler">
+              <span class="navbar-toggler-icon"></span>
+          </button> 
+
+          <div class="col-sm-10" style="float: left;">
+               <div class="row  justify-content-between  d-none d-sm-flex " style="padding-left: 34%; white-space:nowrap;">
+                   <span style="
+                          font-size: 40px;
+                          color:#640b35;
+                          font-weight: 600;
+                          font-family: 'Satisfy',sans-serif; 
+                   ">Celebrare</span>
+                     
+                     <div class="user-details-container" >
+                          <div class="user-profile-image-container">
+                          <img src="" alt="">
+                          </div>
+                          <div class="user-name-container">
+                          <span>Welcome, </span>
+                          <span class="user-name"></span>
+                          </div>
+                    </div>
+
+
+
+
+                      <a
+                          class="login-button navbar-text"
+                          class="navbar-text " style=" display: none;margin-left: 10%; float: right; color: rgba(5, 1, 7, 0.562);  font-family: 'Playfair Display', serif" id="login-button">
+                              <button class=" signup-button">
+                                  <img src="../img/person.svg" alt="" style="height: fit-content;margin-left: -3px;"> 
+                                  Sign up
+                              </button>
+                      </a>
+                          
+                  </div>
+               
+                  <div class="row"  style="float: left;" >
+         <div class="collapse navbar-collapse" id="Navbar"  >
+              <ul class="navbar-nav mr-auto" >
+                  <li class="nav-item dropdown" style="margin-right: 10% ;">
+                      <a 
+                          class="nav-link dropdown-toggle"  
+                          data-toggle="dropdown" 
+                          style=" white-space: nowrap; 
+                                  color:  rgba(42, 25, 58, 0.562); 
+                                  font-family:'Playfair Display', serif;" >
+                                  Birthday Cards
+                          </a>
+                        <ul class="dropdown-menu" style="width: 500px ; background-color: white;"> 
+                            <div class="row" style=" margin-top: 2%" >
+                      <div class="col-3" style="margin-left: 3%; " >
+                      <li><a  href="./Birthday.html?cardCategory=birthday&cardSubCategory=forhim"> For Him</a></li> 
+                      <li><a   href="./Birthday.html?cardCategory=birthday&cardSubCategory=forher"> For Her</a></li> 
+                      
+                      <li><a  href="./Birthday.html?cardCategory=birthday&cardSubCategory=dad"> Dad</a></li> 
+                      <li><a   href="./Birthday.html?cardCategory=birthday&cardSubCategory=mom"> Mom</a></li> 
+                      </div>
+                      <div class="col-sm-3" style="margin-left:3% ; margin-bottom: 3%; " >
+                      <li><a  href="./Birthday.html?cardCategory=birthday&cardSubCategory=kids"> Kids</a></li> 
+                      <li><a   href="./Birthday.html?cardCategory=birthday&cardSubCategory=friends"> Friends</a></li> 
+                      <li><a  href="./Birthday.html?cardCategory=birthday&cardSubCategory=funnycards"> Funny Cards</a></li> 
+                      <li><a   href="./Birthday.html?cardCategory=birthday&cardSubCategory=generalcards"> General Cards</a></li>
+                      </div>
+                      <div class="col-sm-3 d-none d-md-block" style="margin-top:-12% ; margin-left:7% ;">
+
+                          <img src="../img/birthday-svg.svg" style="width: 140%; height:120% ;  ">
+                      </div>
+                              </div>
+
+                      </ul> 
+                  </li>
+                  <li class="nav-item dropdown" style="margin-right: 10% ;"><a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="" style="font-size: 100%;  white-space: nowrap; color:  rgba(27, 2, 36, 0.562); font-family:'Playfair Display', serif" >Anniversary Cards</a>
+                      <ul class="dropdown-menu" style=" width: 280px ; background-color: white;"> 
+                  <div  class="row" style="margin-top: 2%;">
+                      <div class="col-sm-5" style="margin-left: 4%;"> 
+                              
+                    <li><a  href="./Anniversary.html?cardCategory=anniversary&cardSubCategory=husband">For Husband</a></li> 
+                    <li><a   href="./Anniversary.html?cardCategory=anniversary&cardSubCategory=wife">For Wife</a></li> 
+                    <li><a  href="./Anniversary.html?cardCategory=anniversary&cardSubCategory=parents">For Parents</a></li> 
+                    <li><a   href="./Anniversary.html?cardCategory=anniversary&cardSubCategory=generalcards">General Cards</a></li> 
+                  </div>
+                  <div class="col-sm-5 d-none d-md-block" style="  margin-left:1% ;">
+
+                      <img src="../img/anniversary-svg.svg" style="width: 123%; height:90% ;   ">
+                  </div> 
+                  </div> 
+                  
+                      
+
+                </ul> </li>
+
+                <li class="nav-item dropdown" style="margin-right: 10% ;"><a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="" style="font-size: 100%;  white-space: nowrap; color:  rgba(27, 2, 36, 0.562); font-family:'Playfair Display', serif" >Feeling Cards</a>
+                  <ul class="dropdown-menu" style="width: 500px ;  background-color: white"> 
+                      <div class="row" style="margin-bottom: 3%;">
+                          <div class="col-3" style="margin-left: 3%;" >
+                <li><a  href="./Feelings.html?cardCategory=feelings&cardSubCategory=love">Love Cards</a></li> 
+                <li><a  href="./Feelings.html?cardCategory=feelings&cardSubCategory=thankyou">Thank you Cards</a></li> 
+                 
+                <li><a  href="./Feelings.html?cardCategory=feelings&cardSubCategory=sorry">Sorry Cards</a></li> 
+                <li><a  href="./Feelings.html?cardCategory=feelings&cardSubCategory=congrats">Congrats Cards</a></li> 
+                </div>
+                <div class="col-sm-3" style="margin-left: 7%; " >
+                <li><a href="./Feelings.html?cardCategory=feelings&cardSubCategory=weddingwishes">Wedding Greetings</a></li> 
+                <li><a href="./Feelings.html?cardCategory=feelings&cardSubCategory=missyou">Miss You Cards </a></li> 
+                <li><a href="./Feelings.html?cardCategory=feelings&cardSubCategory=getwellsoon">Get Well Soon</a></li> 
+                
+                </div>
+                <div class="col-sm-3 d-none d-md-block" style="  margin-left:5% ; margin-top: -3%;">
+
+                  <img src="../img/feelings-svg.svg" style="width: 160%; height:135% ;margin-left: -25%; ">
+              </div> 
+                  </div>
+
+            </ul> </li>
+                  
+                  <li class="nav-item" style="margin-right: 10%;"><a class="nav-link" href="" style="font-size: 100%;  white-space: nowrap; color:  rgba(5, 1, 7, 0.562); font-family: 'Playfair Display', serif">About Us</a></li>
+                  <li class="nav-item" style="margin-right: 10%;"><a class="nav-link" href="../androidAppPage/androidAppPage.html"  style=" font-size: 100%;  white-space: nowrap; color: rgba(5, 1, 7, 0.562); font-family: 'Playfair Display', serif">Android App</a></li>    
+                  <li class="nav-item login-button d-sm-none" style="display: none;margin-right: 10%;"><a class="nav-link" style=" font-size: 100%;  white-space: nowrap; color: rgba(5, 1, 7, 0.562); font-family: 'Playfair Display', serif">Signup</a></li>
+                  <li class="nav-item user-name d-block d-sm-none" style="margin-right: 10%;font-size: 100%;  white-space: nowrap; color: rgba(5, 1, 7, 0.562); font-family: 'Playfair Display', serif;"></li>              
+                  <li class="nav-item logout-button" style="margin-right: 10%;font-size: 100%;  white-space: nowrap; color: rgba(5, 1, 7, 0.562); font-family: 'Playfair Display', serif;cursor: pointer;"> <a class="nav-link">Log out</a></li>              
+              </ul>
+            
+              </div>
+              
+              
+                  </div>
+         
+          </div>
+            
+      </div>
+      </nav>
+  </header>
+
+    <header class="jumbotron" style="background-image: linear-gradient(to right, #F57512,#CD00BF);">
+      <div class="container">
+        <div class="row row-header align-items-center justify-content-centre">
+          <div class="col-12 col-md-6" style="text-align: center;">
+            <img
+              id="category-svg"
+              src=""
+              alt="anniversary"
+              height="200"
+              width="210"
+              class="img-fluid"
+            /><br /><br />
+          </div>
+          <div class="col-12 col-md-6 align-self-center">
+            <div>
+              <h1
+                id="card-title"
+                style="color: white; font-family: 'Merienda',cursive; text-align: center; font-size: 320%;"
+              >
+              </h1>
+              <br />
+              .
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <br />
+
+    <div id="loader-container" style="width: 100%;height: 30vh;display: flex;justify-content: center;align-items: center;">
+      <div id="loader"></div>
+    </div>
+
+    <div class="container w-100 d-flex align-items-center justify-content-center flex-column" style="height: fit-content;">
+      <div class="row w-100" id="card-container" style="height: fit-content;">
+      </div>
+      <div class="row w-100 mt-5" id="page-buttons-container">
+        <div id="pagination-button-container"></div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="footer">
+      <div class="container w-100 h-100 m-20">
+        <div class="row w-100 h-70" id="footer-upper-part">
+          <div class="col-md-6">
+            <div class="footer-left-part w-100 h-100">
+              <img src="../img/celebrare-logo.svg" alt="" />
+              <span>Celebrare</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-right-part w-100 h-100">
+              <div class="footer-right-part-1">
+                <span class="title">Cards</span>
+                <span>E-Cards</span>
+                <span>Greetings Cards</span>
+              </div>
+              <div class="footer-right-part-2">
+                <span class="title">Category</span>
+                <span>Birthday Cards</span>
+                <span>Anniversary Cards</span>
+                <span>Feeling Cards</span>
+              </div>
+              <div class="footer-right-part-3">
+                <span class="title">Company</span>
+                <a href="../privacyPolicy.html">
+                  <span style="text-decoration: underline;">Privacy Policy</span>
+                </a>
+                <a href="../termsOfUse.html">
+                  <span style="text-decoration: underline;">Terms Of Use</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="footer-bottom-part">
+          <div class="footer-bottom-part">
+            <span>© Celebrare, Inc.<span>&nbsp;</span><span id="current-year"></span><span>&nbsp;</span>We love your smile.</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../js/lottie.js" ></script>
+    <script type="text/javascript" src="../js/firebaseUtils.js" ></script>
+    <script type="text/javascript" src="../js/loader.js" ></script>
+    <script type="text/javascript" src="../js/anniversary.js" ></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+    <script type="text/javascript" src="../js/previewPage.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Celebrare</title>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Playfair+Display:wght@600&family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"/>
+
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <link type="text/css" rel="stylesheet" href="../css/receiverPreviewPage.css" />
+
+    <!-- bootstrap-4.3 -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- bootstrap-4.3 -->
+
+    <!-- firebase -->
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-storage.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+    <!-- firebase -->
+
+        <!-- turn -->
+        <script type="text/javascript" src="../js/turn.min.js" ></script>
+
+
+    <link rel="icon" href="../img/LOGO5.svg">
+  </head>
+    
+  <body>
+
+    <section class="animation-container-1 animation-container">
+      <div id="letter-packed"></div>
+    </section>
+
+    <section class="animation-container-2 animation-container">
+      <div id="message-send"></div>
+    </section>
+
+    <section class="animation-container-3 animation-container">
+      <div id="plane-fly"></div>
+    </section>
+
+    <section class="animation-container-4 animation-container">
+      <div id="message-received"></div>
+    </section>
+
+    <section class="header-container">
+        <div class="container-fluid" style="background-color: #f9f9fb;"> 
+            <div class="row header" >
+              <div class="col-6 col-md-4">
+                <div class="logo-container">
+                  <img src="../img/BottomLogo.png" alt="" class="logo-image">
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div id="audio-control-button-container" style="display: flex;justify-content: center;align-items: center;">
+                  <div id="play-button">
+                    <img src="../img/play-circle.svg" alt="" style="width: 40px;height: 40px;">
+                  </div>
+                  <div id="pause-button" style="display:none">
+                    <img src="../img/pause-circle.svg" alt="" style="width: 40px;height: 40px;">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 d-none d-md-flex">
+                <div class="user-details-container" >
+                  <!-- <div class="user-profile-image-container">
+                    <img src="" alt="">
+                  </div> -->
+                  <div class="user-name-container">
+                    <span>Welcome,</span>
+                    <span class="user-name"> Receiver</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-display">
+
+      <div style="width: fit-content;justify-content: center;display: flex;align-items: center;">
+        <div  class="flipbook-backward-button" id="flipbook-backward-button-0">
+          <img id="prev" src="../img/back button.svg" style="cursor: pointer;"  alt="">
+        </div>
+        <div  class="flipbook-forward-button" id="flipbook-forward-button-0">
+          <img id="next" src="../img/back button.svg" alt="" style="transform: rotate(180deg);cursor: pointer;">
+        </div>
+      </div>
+      
+      <div class="container-fluid" id="flipbook-screen-wrapper">
+        <div  class="flipbook-backward-button" id="flipbook-backward-button-1">
+          <img id="prev1" src="../img/back button.svg" style="cursor: pointer;"  alt="">
+        </div>
+        <div class="row flipbook-screen" >
+          <div class="flipbook-container">
+            <div id="flipbook">
+              <div class="hard" id="flipbook-front-page">
+                <img
+                  src=""
+                  alt=""
+                  style="height: 100%; width: 100%;"
+                />
+              </div>
+              <div class="hard" id="flipbook-middle-left-page">
+                <img 
+                  src="" 
+                  alt="" 
+                  style="height: 100%; width: 100%;"/>
+              </div>
+              <div class="hard" id="flipbook-middle-right-page">
+                <img 
+                  src="" 
+                  alt="" 
+                  style="height: 100%; width: 100%;"/>
+              </div>
+              <div class="hard" id="flipbook-back-page">
+                <img
+                  src=""
+                  alt=""
+                  style="height: 100%; width: 100%;"
+                />
+              </div>
+            </div>
+
+            <div id="flipbook-l">
+              <div class="hard" id="flipbook-front-page-l">
+                <img
+                  src=""
+                  alt=""
+                  style="height: 100%; width: 100%;"
+                />
+              </div>
+              <div class="hard" id="flipbook-middle-left-page-l">
+                <img 
+                  src="" 
+                  alt="" 
+                  style="height: 100%; width: 100%;"/>
+              </div>
+
+              <div class="hard" id="flipbook-middle-right-page-l">
+                <img 
+                  src="" 
+                  alt="" 
+                  style="height: 100%; width: 100%;"/>
+              </div>
+              <div class="hard" id="flipbook-back-page-l">
+                <img
+                  src=""
+                  alt=""
+                  style="height: 100%; width: 100%;"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div  class="flipbook-forward-button" id="flipbook-forward-button-1">
+          <img id="next1" src="../img/back button.svg" alt="" style="transform: rotate(180deg);cursor: pointer;">
+        </div>
+      </div>
+
+      <div class="container-fluid" id="ecard-screen-wrapper">
+        <div id="preview-ecard-image">
+        </div>
+      </div>
+
+    </section>
+
+    <audio src="" id="music-player">
+    </audio>
+
+
+    <script type="text/javascript" src="../js/lottie.js"></script>
+    <script type="text/javascript" src="../js/firebaseUtils.js" ></script>
+    <script type="text/javascript" src="../js/receiverPreviewPage.js"></script>
+
+  </body>
+</html>

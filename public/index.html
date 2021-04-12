@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Celebrare</title>
+    <meta property="og:title" content="Celebrare"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://celebrare.in"/>
+    <meta property="og:image" content="https://celebrare.in/img/BottomLogo.png"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Playfair+Display:wght@600&family=Satisfy&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"/>
+    
+    <link type="text/css" rel="stylesheet" href="./css/style.css" />
+    <link type="text/css" rel="stylesheet" href="./css/footer.css" />
+    <link type="text/css" rel="stylesheet" href="./css/login.css" />
+    <link type="text/css" rel="stylesheet" href="./css/home.css" />
+    <!-- bootstrap-4.3 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- bootstrap-4.3 -->
+
+    <!-- firebase -->
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-messaging.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <!-- firebase -->
+    <link rel="icon" href="./img/LOGO5.svg">
+
+  </head>
+
+  <body style="overflow-x: hidden;">
+    
+
+    <div class="login_main_display">
+        <div class="login_page">
+          <div class="left_block">
+            <span id="welcome"> Welcome </span>
+            <span id="tagline"> We love our users</span>
+          </div>
+          <div class="right_block">
+              <div id="close-login-popup">
+                <i class="fa fa-times" id="close-sharing-option-popup-container"></i>
+              </div>
+            <div class="social_login">
+              <div class="logo-container">
+                <img src="./img/celebrare-logo.svg" alt="" />
+                <span>Celebrare</span>
+              </div>
+              <div class="button-container">
+                <div id="googleLogIn">
+                  <img src="./img/gogle.svg" alt="" id="google-icon" />
+                  Continue with Google
+                </div>
+                <div id="facebookLogIn">
+                  <img src="./img/facebook.svg" alt="" id="facebook-icon" />
+                  Continue with Facebook
+                </div>
+              </div>
+            </div>
+            <span id="tagline" class="d-flex d-lg-none"> We love our users</span>
+          </div>
+        </div>
+      </div>
+
+    <div class="main-display">
+        <header class="hello1" >
+            <nav class="navbar  navbar-expand-sm navbar-light" style="background-color: white ; box-shadow: 0 2px 10px -5px rgba(0, 0, 0, 0.3);">
+                <div class="container-fluid">
+                    
+                    <div class="d-none d-sm-block">    
+                    <a class="navbar-brand" id="navbar-brand">
+                        <img src="img/LOGO5.svg" alt="logo" height="70" width="70" style="padding-left:  5% ; padding-right: 3% ;" >
+                    </a>
+                </div>
+
+                <div class="d-block d-sm-none">    
+                    <a class="navbar-brand" id="navbar-brand">
+                        <img src="img/BottomLogo.png" alt="logo" height="53.99" width="130" style="padding-left:  5% ; padding-right: 3% ;" >
+                    </a>
+                </div>
+    
+                <button class="navbar-toggler navbar-toggler-button" type="button" data-toggle="collapse" data-target="#Navbar" id="toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
+    
+                <div class="col-sm-10" style="float: left;">
+                     <div class="row  justify-content-between  d-none d-sm-flex " style="padding-left: 34%; white-space:nowrap;">
+                         <span style="
+                                font-size: 40px;
+                                color:#640b35;
+                                font-weight: 600;
+                                font-family: 'Satisfy',sans-serif; 
+                         ">Celebrare</span>
+                           
+                           <div class="user-details-container" >
+                                <div class="user-profile-image-container">
+                                <img src="" alt="">
+                                </div>
+                                <div class="user-name-container">
+                                <span>Welcome, </span>
+                                <span class="user-name"></span>
+                                </div>
+                          </div>
+
+
+
+    
+                            <a
+                                class="login-button navbar-text"
+                                class="navbar-text " style=" display: none;margin-left: 10%; float: right; color: rgba(5, 1, 7, 0.562);  font-family: 'Playfair Display', serif" id="login-button">
+                                    <button class=" signup-button">
+                                        <img src="./img/person.svg" alt="" style="height: fit-content;margin-left: -3px;"> 
+                                        Sign up
+                                    </button>
+                            </a>
+                                
+                        </div>
+                     
+                        <div class="row"  style="float: left;" >
+               <div class="collapse navbar-collapse" id="Navbar"  >
+                    <ul class="navbar-nav mr-auto" >
+                        <li class="nav-item dropdown" style="margin-right: 10% ;">
+                            <a 
+                                class="nav-link dropdown-toggle"  
+                                data-toggle="dropdown" 
+                                style=" white-space: nowrap; 
+                                        color:  rgba(42, 25, 58, 0.562); 
+                                        font-family:'Playfair Display', serif;" >
+                                        Birthday Cards
+                                </a>
+                              <ul class="dropdown-menu" style="width: 500px ; background-color: white;"> 
+                                  <div class="row" style=" margin-top: 2%" >
+                            <div class="col-3" style="margin-left: 3%; " >
+                            <li><a  href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=forhim"> For Him</a></li> 
+                            <li><a   href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=forher"> For Her</a></li> 
+                            
+                            <li><a  href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=dad"> Dad</a></li> 
+                            <li><a   href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=mom"> Mom</a></li> 
+                            </div>
+                            <div class="col-sm-3" style="margin-left:3% ; margin-bottom: 3%; " >
+                            <li><a  href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=kids"> Kids</a></li> 
+                            <li><a   href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=friends"> Friends</a></li> 
+                            <li><a  href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=funnycards"> Funny Cards</a></li> 
+                            <li><a   href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=generalcards"> General Cards</a></li>
+                            </div>
+                            <div class="col-sm-3 d-none d-md-block" style="margin-top:-12% ; margin-left:7% ;">
+    
+                                <img src="img/birthday-svg.svg" style="width: 140%; height:120% ;  ">
+                            </div>
+                                    </div>
+    
+                            </ul> 
+                        </li>
+                        <li class="nav-item dropdown" style="margin-right: 10% ;"><a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="" style="font-size: 100%;  white-space: nowrap; color:  rgba(27, 2, 36, 0.562); font-family:'Playfair Display', serif" >Anniversary Cards</a>
+                            <ul class="dropdown-menu" style=" width: 280px ; background-color: white;"> 
+                        <div  class="row" style="margin-top: 2%;">
+                            <div class="col-sm-5" style="margin-left: 4%;"> 
+                                    
+                          <li><a  href="./cardCategories/Anniversary.html?cardCategory=anniversary&cardSubCategory=husband">For Husband</a></li> 
+                          <li><a   href="./cardCategories/Anniversary.html?cardCategory=anniversary&cardSubCategory=wife">For Wife</a></li> 
+                          <li><a  href="./cardCategories/Anniversary.html?cardCategory=anniversary&cardSubCategory=parents">For Parents</a></li> 
+                          <li><a   href="./cardCategories/Anniversary.html?cardCategory=anniversary&cardSubCategory=generalcards">General Cards</a></li> 
+                        </div>
+                        <div class="col-sm-5 d-none d-md-block" style="  margin-left:1% ;">
+    
+                            <img src="img/anniversary-svg.svg" style="width: 123%; height:90% ;   ">
+                        </div> 
+                        </div> 
+                        
+                            
+    
+                      </ul> </li>
+    
+                      <li class="nav-item dropdown" style="margin-right: 10% ;"><a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="" style="font-size: 100%;  white-space: nowrap; color:  rgba(27, 2, 36, 0.562); font-family:'Playfair Display', serif" >Feeling Cards</a>
+                        <ul class="dropdown-menu" style="width: 500px ;  background-color: white"> 
+                            <div class="row" style="margin-bottom: 3%;">
+                                <div class="col-3" style="margin-left: 3%;" >
+                      <li><a  href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=love">Love Cards</a></li> 
+                      <li><a  href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=thankyou">Thank you Cards</a></li> 
+                       
+                      <li><a  href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=sorry">Sorry Cards</a></li> 
+                      <li><a  href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=congrats">Congrats Cards</a></li> 
+                      </div>
+                      <div class="col-sm-3" style="margin-left: 7%; " >
+                      <li><a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=weddingwishes">Wedding Greetings</a></li> 
+                      <li><a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=missyou">Miss You Cards </a></li> 
+                      <li><a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=getwellsoon">Get Well Soon</a></li> 
+                      
+                      </div>
+                      <div class="col-sm-3 d-none d-md-block" style="  margin-left:5% ; margin-top: -3%;">
+    
+                        <img src="img/feelings-svg.svg" style="width: 160%; height:135% ;margin-left: -25%; ">
+                    </div> 
+                        </div>
+    
+                  </ul> </li>
+                        
+                        <li class="nav-item" style="margin-right: 10%;"><a class="nav-link" href="" style="font-size: 100%;  white-space: nowrap; color:  rgba(5, 1, 7, 0.562); font-family: 'Playfair Display', serif">About Us</a></li>
+                        <li class="nav-item" style="margin-right: 10%;"><a class="nav-link" href="./androidAppPage/androidAppPage.html"  style=" font-size: 100%;  white-space: nowrap; color: rgba(5, 1, 7, 0.562); font-family: 'Playfair Display', serif">Android App</a></li>    
+                        <li class="nav-item login-button d-sm-none" style="display: none;margin-right: 10%;"><a class="nav-link" style=" font-size: 100%;  white-space: nowrap; color: rgba(5, 1, 7, 0.562); font-family: 'Playfair Display', serif">Signup</a></li>
+                        <li class="nav-item user-name d-block d-sm-none" style="margin-right: 10%;font-size: 100%;  white-space: nowrap; color: rgba(5, 1, 7, 0.562); font-family: 'Playfair Display', serif;"></li>              
+                        <li class="nav-item logout-button" style="margin-right: 10%;font-size: 100%;  white-space: nowrap; color: rgba(5, 1, 7, 0.562); font-family: 'Playfair Display', serif;cursor: pointer;"> <a class="nav-link">Log out</a></li>              
+                    </ul>
+                  
+                    </div>
+                    
+                    
+                        </div>
+               
+                </div>
+                  
+            </div>
+            </nav>
+        </header>
+    
+        <!--Frist section Web-->
+   <div class="container-fluid d-none d-md-flex" style="width: 100%;height:90vh ;">
+       <div class="col-md-5 Home-frist">
+         <center>  
+             <h1 style="font-family: 'Merienda', cursive; color: rgb(233, 17, 17); white-space: nowrap; font-size: 4vw;">2 Minutes that's all !!</h1>
+                   <br>
+                   <h2 style="font-family: 'Merienda', cursive;  color:  #b3145f ; white-space: nowrap;font-size: 2.5vw;">It takes to Make your loved<br>ones Feel Special.</h2><br>
+                   <a href="#birthday" class="btn btn-danger" style="width: fit-content;height: fit-content;background-color:  rgb(233, 17, 17);color: white;font-family: 'Merienda', cursive;font-size: 2.2vw;">Send a Card</a>
+        
+        </center>
+
+            </div>
+       <div class="col-md-7">
+           
+           <div id="home-animation" style="height: 100%;width: 100%;"></div>
+       </div>
+
+       
+
+ </div>
+  <!--Frist section Mobile-->
+ <div class="container fluid d-block d-md-none">
+     <div class="col-12">   
+         <!--<div id="home-animation-1" style="margin-top: 10px" ></div>-->
+    </div>
+    <div class="col-12" style="display: flex; justify-content: center;align-items: center;height: 63.5vh;">   
+        <div style="margin-top: 27%;"> <center>  <h2 style="font-family: 'Merienda', cursive; color: rgb(233, 17, 17); white-space: nowrap;font-size: 8.9vw;">2 Minutes that's all !!</h2>
+            <br>
+            <h3 style=" font-family: 'Merienda', cursive; color:  #bd1d68; white-space: nowrap;    font-size: 5.5vw;
+            ">It takes to Make your loved<br>ones Feel Special.</h3><br><br>
+            <a href="#birth" class="btn btn-danger" style="background-color:  rgb(233, 17, 17);color: white; font-family: 'Merienda', cursive;font-size: 6.95vw; ;">Send a Card</a>
+ 
+ </center></div>
+   </div>
+
+
+ </div>
+
+  <br><br>
+  <!--Brithday Web-->
+    <div class="container-fluid hello d-none d-md-block show-on-scroll" id="birthday" style="margin-top: 3%;" >
+    <br><br>
+    
+    <h1 style="margin-left: 12% ;"><span style="font-size: 46px; color:  #640b35 ;font-family: 'Merienda', cursive; margin-left: 5% ; "><i>Birthday</i></span> <span style="font-size: 46px;font-family: 'Merienda', cursive;color:  #640b35;"><b><i> Cards</i></b></span></span></h1>
+    
+
+    <div class="row " style=" margin-left: 10%; margin-top: -5%; ">
+        
+        <div class="col-sm-5" style="margin-left: 9%;">
+            <img src="img/birthday-svg.svg" alt="bday"  style=" float: right;height: 80%; width:155%" class="item-img" >
+        </div>
+        
+        <div class="col-sm-7 show-on-scroll1 " style="padding-left: 4% ;margin-left:-18%; margin-top:8% ;">
+            
+            <div class="row" style="height: 26%; margin-top: 0.5%;" >
+                <div class="col-3 birthday-button">
+                    <div style="text-align:center;">
+                        <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=forhim">
+                            <img src="img/birthday-forhim-svg.svg" alt="bday1" style=" margin-top:17px ; height:80% ; width: 85%;" >
+                            <div class="birthday-button-text">For Him</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-3 birthday-button "  >
+                    <div style="text-align:center;">
+                        <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=forher">
+                            <img src="img/birthday-forher-svg.svg" alt="bday1" style=" margin-top:17px ; height:75% ; width: 78%;" >
+                            <div class="birthday-button-text">For Her</div>
+                        </a>
+                
+                
+                    </div>
+
+                </div>
+                
+                <div class="col-3 birthday-button"  >
+                    <div style="text-align:center;">
+                        <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=dad">
+                            <img src="img/birthday-dad-svg.svg" alt="bday1" style=" margin-top:17px ; height:80% ; width: 78%;" >
+                            <div class="birthday-button-text">Dad</div>
+                        </a>
+            
+                    </div>
+
+                </div>
+                
+
+            </div>
+            <div class="row " style="height:26% ; margin-top: 0.5%;">
+                <div class="col-3 birthday-button"  >
+                    <div style="text-align:center;">
+                        
+                    <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=mom">
+                          <img src="img/birthday-mom-svg.svg" alt="bday1"  style=" margin-top:17px ; height:80% ; width: 78%;" >
+                          <div class="birthday-button-text">Mom</div>
+                        </a>
+                
+                
+                    </div>
+
+                </div>
+                <div class="col-3 birthday-button"  >
+                    <div style="text-align:center;">
+                        <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=kids">
+                            <img src="img/birthday-kids-svg.svg" alt="bday1"  style=" margin-top:17px ; height:80% ; width: 85%;" >
+                            <div class="birthday-button-text">Kids</div>
+                        </a>
+                
+                    
+                    </div>
+
+                </div>
+                <div class="col-3 birthday-button"  >
+                    <div style="text-align:center;">
+                        <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=friends">
+                            <img src="img/birthday-friends-svg.svg" alt="bday1" style=" margin-top:17px ; height:80% ; width: 78%;" >
+                            <div class="birthday-button-text">Friends</div>
+                        </a>
+
+            
+                    
+                    </div>
+
+                </div>
+                
+
+            </div>
+    
+            <div class="row" style="height:26% ; margin-top: 0.5%;">
+                <div class="col-sm-2"></div>
+                <div class="col-3 birthday-button"  >
+                    <div style="text-align:center;">
+                        <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=funnycards">
+                            <img src="img/birthday-funnycards-svg.svg" alt="bday1" style=" margin-top:17px ; height:80% ; width: 78%;" >
+                            <div class="birthday-button-text">Funny Cards</div>
+                        </a>
+                
+                        
+                        </div>
+                    
+                </div>
+                <div class="col-3 birthday-button" >
+                    <div style="text-align:center;">
+                        <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=generalcards">
+                            <img src="img/birthday-general-svg.svg" alt="bday1"  style=" margin-top:17px ; height:80% ; width: 78%;" >
+                            <div class="birthday-button-text">General Cards</div>
+                        </a>
+                
+                        
+                        </div>
+                        
+                </div>
+                
+
+            </div>
+
+
+        </div>
+
+        
+        
+        
+
+
+    </div>
+    
+    
+    </div>
+    <!--Brithday Mobile-->
+    <div  class="container d-block d-md-none   " id="birth">
+        <center>
+            <br><br>
+            <div class="row" style="height: 150px ;width:95%  ; border-top-left-radius: 10px; border-top-right-radius: 10px; box-shadow: 8px 4px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3);align-items: center;">
+                <div class="col-6" style="text-align: center;">
+                    <br> 
+                    <h1 style="font-size: 8vw;color:  #640b35 ;font-family: 'Merienda', cursive; ">
+                        <span>
+                            <i>Birthday</i>
+                        </span>
+                        <span>
+                            <b><i> Cards</i></b>
+                        </span>
+                    </span>
+                    </h1>
+                </div>
+                <div class="col-6" style="margin-left: -5%;">
+                    <img src="img/birthday-svg.svg" alt="bday1" style=" height:23vh; width: 125%;margin-right:5%;">
+                </div>
+        
+        
+            </div>
+            <div class="row" style="width:95% ; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3);"> 
+            <center class="brithday-moblie">
+                <div class="row " style="text-align: center; margin-left: 7% ">
+               
+                <div class="col-5" style=" margin-right: 8% ; margin-left: -3%;">
+                    
+                    <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=forhim" ><img src="img/birthday-forhim-svg.svg" alt="bday2"></a>
+                    <div class="brithday-moblie-text" >For Him</div>
+                      
+                
+                    
+                </div>
+                <div class="col-5" >
+                 
+                    <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=forher" ><img src="img/birthday-forher-svg.svg" alt="bday2"></a>
+                    <div class="brithday-moblie-text">For Her</div>
+              
+                    
+                </div>
+
+                
+              </div>
+              </center>
+              <center class="brithday-moblie">
+                <div class="row " style="text-align: center;margin-left: 7% ">
+               
+                <div class="col-5" style=" margin-right: 8% ; margin-left: -3%; ">
+                    
+                    <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=dad" ><img src="img/birthday-dad-svg.svg" alt="bday2" ></a>
+                    <div class="brithday-moblie-text">For Dad</div>
+                      
+                
+                    
+                </div>
+                <div class="col-5" >
+                 
+                    <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=mom" ><img src="img/birthday-mom-svg.svg" alt="bday2"></a>
+                    <div class="brithday-moblie-text">For Mom</div>
+              
+                    
+                </div>
+
+                
+              </div>
+              </center>
+              <center class="brithday-moblie"> 
+                <div class="row " style="text-align: center; margin-left: 7% ">
+               
+                <div class="col-5" style=" margin-right: 8% ; margin-left: -3%;">
+                    
+                    <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=kids" ><img src="img/birthday-kids-svg.svg" alt="bday2" ></a>
+                    <div class="brithday-moblie-text">For Kids</div>
+                      
+                
+                    
+                </div>
+                <div class="col-5" >
+                 
+                    <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=friends" ><img src="img/birthday-friends-svg.svg" alt="bday2"></a>
+                    <div class="brithday-moblie-text">Friends</div>
+              
+                    
+                </div>
+
+                
+              </div>
+              </center>
+              <center class="brithday-moblie">
+                <div class="row " style="text-align: center; margin-left: 7% ">
+               
+                <div class="col-5" style=" margin-right: 8% ; margin-left: -3%;">
+                    
+                    <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=funnycards" ><img src="img/birthday-funnycards-svg.svg" alt="bday2" ></a>
+                    <div class="brithday-moblie-text">Funny Cards</div>
+                      
+                
+                    
+                </div>
+                <div class="col-5">
+                 
+                    <a href="./cardCategories/Birthday.html?cardCategory=birthday&cardSubCategory=generalcards" ><img src="img/birthday-general-svg.svg" alt="bday2"></a>
+                    <div class="brithday-moblie-text">General Cards</div>
+              
+                    
+                </div>
+
+                
+              </div>
+              </center>
+            </div>
+        </center>
+    </div>
+
+ <!--Anniversary Moblie-->
+    <div class="container d-block d-md-none ">
+        <center>
+    <br><br><br>
+    <div class="row" style="height: 150px; width: 95% ; border-top-left-radius: 10px; border-top-right-radius: 10px; box-shadow: 8px 4px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3);align-items: center;">
+       
+        <div class="col-6" style="text-align: center;">
+            <img src="img/anniversary-svg.svg" alt="bday1" style="width: 26vw; margin-top: 10%;">
+        </div>
+        <div class="col-6" style="text-align: center; margin-left:-13% ; margin-top:4%;">
+            
+            <h1 style="font-size: 8vw;color:  #640b35 ;font-family: 'Merienda', cursive;  ">
+                <span>
+                    <i>Anniversary</i>
+                </span>
+                <span>
+                    <b><i> Cards</i></b>
+                </span></span>
+            </h1>
+            
+            
+
+        </div>
+       
+
+
+    </div>
+    <div class="row" style="height: 61vh; width:  95% ; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3);">
+        <div class="col-6" style="text-align: center;">
+            <div class="row anniversary-mobile">
+                <a href="./cardCategories/Anniversary.html?cardCategory=anniversary&cardSubCategory=husband">
+                    <img src="img/anniversary-forhusband-svg.svg" alt="bday2" style="height: 70%; width: 70%; margin-top:20% ; ">
+                </a>
+                <div class="anniversary-mobile-text">For Husband</div>
+                    
+                            
+            
+            </div>
+            <div class="row anniversary-mobile">
+                <a href="./cardCategories/Anniversary.html?cardCategory=anniversary&cardSubCategory=parents">
+                    <img src="img/anniversary-forparents-svg.svg" alt="bday2" style="height: 60%; width: 65%; margin-top: 45% ; ">
+                </a>
+                <div class="anniversary-mobile-text"> For Parents</div>
+
+                
+                
+            
+            </div>
+            
+            
+            
+
+        </div>
+        <div class="col-6">
+
+            <div class="row anniversary-mobile">
+                <a href="./cardCategories/Anniversary.html?cardCategory=anniversary&cardSubCategory=wife">
+                    <img src="img/anniversary-forwife-svg.svg" alt="bday2" style="height: 70%; width: 80%; margin-top:20% ; ">
+                </a>
+                <div class="anniversary-mobile-text">For Wife</div>                        
+
+                            
+            
+            </div>
+            <div class="row anniversary-mobile">
+                
+                <a href="./cardCategories/Anniversary.html?cardCategory=anniversary&cardSubCategory=generalcards"> 
+                    <img src="img/anniversary-general-svg.svg" alt="bday2" style="height: 65%; width: 65%; margin-top: 45% ; ">
+                </a>
+                <div class="anniversary-mobile-text">General Cards</div>
+                    
+            
+            </div>
+            
+
+        
+        </div>
+
+
+    </div>
+    
+</center>
+
+    </div>
+ <!--Anniversary Web-->
+    <div class="container d-none d-md-block hello show-on-scroll " style="margin-top: -10%;">
+    
+    <br>
+    <br>
+    <h1><span style="font-size: 46px; color:  #640b35 ;font-family: 'Merienda', cursive; margin-left: 5% ; "><i>Anniversary</i></span> <span style="font-size: 46px;font-family: 'Merienda', cursive;color:  #640b35;"><b><i> Cards</i></b></span></span></h1>
+    <br><br>
+    <div class="row">
+        <div class="col-sm-7  show-on-scroll2">
+            <br><br><br><br><br>
+            
+            <div class="row" style="height: 40%">
+                <div class="col-sm-5 anniversary-button">
+                    <div style="text-align:center;">
+                        <a href="./cardCategories/Anniversary.html?cardCategory=anniversary&cardSubCategory=husband">
+                            <img src="img/anniversary-forhusband-svg.svg" alt="bday1"  >
+                            <div class="anniversary-button-text">For Husband</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-5 anniversary-button" >
+                    <div style="text-align:center;">
+                        <a href="./cardCategories/Anniversary.html?cardCategory=anniversary&cardSubCategory=wife">
+                            <img src="img/anniversary-forwife-svg.svg" alt="bday1"  >
+                            <div class="anniversary-button-text" style="margin-top: 13%;">For Wife</div>
+                        </a>
+                        </div>
+
+
+                </div>
+                
+
+            </div>
+            <div class="row" style="height: 40%">
+                <div class="col-sm-5 anniversary-button">
+
+                    <div style="text-align:center;">
+                        <a href="./cardCategories/Anniversary.html?cardCategory=anniversary&cardSubCategory=parents">
+                            <img src="img/anniversary-forparents-svg.svg" alt="bday1"  >
+                            <div class="anniversary-button-text">For Parents</div>
+                        </a>
+                        </div>
+                </div>
+                <div class="col-sm-5 anniversary-button" >
+
+                    <div style="text-align:center;">
+                        <a href="./cardCategories/Anniversary.html?cardCategory=anniversary&cardSubCategory=generalcards">
+                              <img src="img/anniversary-general-svg.svg" alt="bday1" >
+                              <div class="anniversary-button-text">General Cards</div>
+                        </a>
+                
+                        
+                        </div>
+                </div>
+                
+            </div>
+    </div>
+    <div class="col-sm-5">
+        <img src="img/anniversary-svg.svg"  alt="bday" 
+        style=" float: right; 
+        height: 85%;
+        width: 114%;" class="item-img">
+    </div>
+    </div>
+    <br><br>
+    </div>
+    <!--Feature Promp-->
+    <div class="container-fluid hello d-none d-md-block show-on-scroll" style=" background-image: linear-gradient( to bottom, #E53935, #4F134C) ; height:100vh;">
+       <div class="row">
+           <div class="col-sm-3" style="margin-top: 8%;  background-color: white; margin-left: 8%; margin-right:4%; border-radius: 3%; box-shadow: 8px 8px 10px -5px ;">
+               <center>
+                   <div>
+               <img src="img/Group 1644.png" style="height: 75%; width: 75% ; margin-top:3%;">
+                   </div>
+                   <div style="margin-top: 20%;">
+                       <h2 style="margin-bottom: 10%;  color:  #640b35 ;font-family: 'Merienda', cursive;">Designed with love</h2>
+                       <p style="margin-bottom: 10%;  color:  #640b35 ;font-family: 'Merienda', cursive;"> Designed with love so that you <br> can make them feel special.</p>
+                   </div>
+               </center>
+       </div> 
+       <div class="col-sm-3 " style="margin-top: 8%;   background-color: white; margin-right:4%;  border-radius: 3%; box-shadow: 8px 8px 10px -5px">
+        <center>
+            <div>
+        <img src="img/Group 1643.png " style="height: 70%; width: 70%;  margin-top:6%; ">
+            </div>
+            <div style="margin-top: 19%;">
+                <h2 style="margin-bottom: 10%;  color:  #640b35 ;font-family: 'Merienda', cursive;">100% Free, No Ads</h2>
+                <p style="margin-bottom: 10%;  color:  #640b35 ;font-family: 'Merienda', cursive;"> Enjoy Uninterrupted Services <br> without Ads and no hidden <br>cost, Because we love your smile. </p>
+            </div>
+    </center>
+    </div> 
+    <div class="col-sm-3 " style="margin-top: 8%;  background-color: white;  border-radius: 3%; box-shadow: 8px 8px 10px -5px">
+        <center>
+            <div>
+        <img src="img/Group 1645.png" style="height: 70%; width: 70%; margin-top:6%;">
+            </div> 
+            <div style="margin-top: 20%;">
+                <h2 style="margin-bottom: 10%;  color:  #640b35 ;font-family: 'Merienda', cursive;">Add Music</h2>
+                <p style="margin-bottom: 10%;  color:  #640b35 ;font-family: 'Merienda', cursive;"> Add Music to make your Card <br> more lively and awesome.</p>
+            </div>   
+    </center>
+    </div> 
+     
+        </div>
+    </div>
+
+
+    
+<!--Feelings Mobile-->
+    <div class="container-fluid hello show-on-scroll d-none d-sm-block"><br><br>
+    
+    <h1 style="font-size: 290%;color:  #640b35 ;font-family: 'Merienda', cursive;margin-left:12%;" class="hello1">
+        <span class="feeling-cards-title" style="margin-left: 3% ; "><i>Feeling</i></span> <span class="feeling-cards-title"><b><i> Cards</i></b></span></span></h1>
+        
+    <div class="row"style="margin-bottom: -10%;">
+
+    <div class="col-6 " style="float: right;margin-left:10% ; margin-right:-15% ;  ">
+        
+        
+        <div class="row" style="margin-top: 20%;">
+        <div class="col-6" style="text-align:center; border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right; margin-left: 15%; border-radius: 10px;">
+            <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=love">
+                <img src="img/feelings-love-svg.svg" alt="bday1"  style=" margin-top:10px ;" class="feelings-category-svg-1">
+                <div class="d-none d-md-block" style="position: relative;   left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 25px; margin-top: 5%;  margin-bottom:5%;">Love Cards</div>
+                <div class="  d-block d-md-none" style="position: relative;   left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 100%; margin-top: 5%;  margin-bottom:5%; white-space: nowrap; margin-left:0 ;">Love Cards</div>
+           
+            </a>
+    
+            
+            </div>
+            </div>
+            <div class="row" style="margin-top: 12%;">
+                <div class="col-6" style="text-align:center; border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right; margin-left: 15%;border-radius: 10px;">
+                    <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=thankyou">
+                        <img src="img/feelings-thankyou-svg.svg" alt="bday1"  style=" margin-top:10% ;" class="feelings-category-svg-2"><br>
+                        <div class="d-none d-md-block" style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 25px; margin-top: 5%;  margin-bottom:5%;">Thank you Cards</div>
+                        <div class="d-block d-md-none" style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 90%; margin-top: 5%;  margin-bottom:5%;">Thank you Cards</div>
+                   
+                    </a>
+        
+            
+                    
+                    </div>
+                    </div>
+                    <div class="row" style="margin-top: 12%;">
+                        <div class="col-6" style="text-align:center; border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right; margin-left: 15%;border-radius: 10px;">
+                            <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=sorry">
+                                <img src="img/feelings-sorry-svg.svg" alt="bday1"  style=" margin-top:10% ; " class="feelings-category-svg-3"><br>
+                                <div class="d-none d-md-block" style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 25px; margin-top: 5%;  margin-bottom:5%; margin-left: 5%;">Sorry Cards</div>
+                                <div class=" d-block d-md-none" style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 100%; margin-top: 5%;  margin-bottom:5%;  margin-left: 5%;">Sorry Cards</div>
+                            
+                            </a>
+                
+                    
+                            
+                            </div>
+                            </div>
+                            <div class="row" style="margin-top: 12%;">
+                                <div class="col-6" style="text-align:center; border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right; margin-left: 15%;border-radius: 10px;">
+                                    <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=congrats">
+                                        <img src="img/feelings-congrats-svg.svg" alt="bday1"  style=" margin-top:10% ;" class="feelings-category-svg-4"><br>
+                                        <div  class="d-none d-md-block" style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 25px; margin-top: 5%; margin-bottom:5%; ">Congrats Cards</div>
+                                        <div class=" d-block d-md-none"  style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 100%; margin-top: 5%; margin-bottom:5%; ">Congrats Cards</div>
+                                   
+                                    </a>
+                        
+                        
+                                    </div>
+                                    
+                                    
+                                    </div><br><br><br><br><br><br><br><br>
+                    
+
+
+    </div>
+    <div class="col-6" style="margin-right: -8%;" >
+        <div class="row" style="margin-right:-15% ;">
+        <img src="img/feelings-svg.svg"  alt="bday" style=" float: left; height:80% ; width: 70%;" class="item-img" >
+    </div>
+    <div class="row" style="margin-left:-10% ;margin-top: -10%; margin-right: 3%; ">
+        <div class="col-6" style="text-align:center;  border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right; margin-left: 15%; background-color: white; border-radius: 10px;">
+            <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=weddingwishes">
+                <img src="img/feelings-weddingwishes-svg.svg" alt="bday1"  style=" margin-top:10px ;" class="feelings-category-svg-5">
+                <div class="d-none d-md-block "style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 25px; margin-top: 5%; margin-bottom:5%;">Wedding greetings</div>
+                <div class=" d-block d-md-none"  style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 100%; margin-top: 5%; margin-bottom:5%; margin-left: 5%;">Wedding greetings</div>
+           
+            </a>
+
+    
+            
+            </div>
+            </div>
+            <div class="row" style="margin-left:-10% ;margin-top: 12%; margin-right: 3%; ">
+                <div class="col-6" style="text-align:center;  border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right; margin-left: 15%; background-color: white; border-radius: 10px;">
+                    <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=missyou">
+                        <img src="img/feelings-missyou-svg.svg" alt="bday1"  style=" margin-top:10px ;" class="feelings-category-svg-6">
+                        <div class="d-none d-md-block " style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 25px; margin-top: 5%; margin-bottom:5%;">Miss you Cards</div>
+                        <div class=" d-block d-md-none" style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 90%; margin-top: 5%; margin-bottom:5%;">Miss you Cards</div>
+                   
+                    </a>
+        
+            
+                
+                    </div>
+                    </div>
+                    <div class="row" style="margin-left:-10% ;margin-top: 12%; margin-right: 3%; ">
+                        <div class="col-6" style="text-align:center;  border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right; margin-left: 15%; background-color: white; border-radius: 10px;">
+                            <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=getwellsoon">
+                                <img src="img/feelings-getwellsoon-svg.svg" alt="bday1"  style=" margin-top:10px ;" class="feelings-category-svg-7">
+                                <div class="d-none d-md-block " style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 25px; margin-top: 5%; margin-bottom:5%;">Get Well Soon</div>
+                                <div class=" d-block d-md-none" style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 90%; margin-top: 5%; margin-bottom:5%;">Get Well Soon</div>
+                            
+                            </a>
+                
+                    
+                        
+                            </div>
+                            </div>
+                           
+                                
+                                <div class="col-6  d-none d-md-block " style=" margin-top: 10%; margin-left:10% ;">
+                                    <span style="font-family: 'Satisfy',cursive;font-size:45px;color: #640b35;font-weight:600;white-space: nowrap;">We love your smile</span>
+                                </div>
+
+                                <div class="col-6 d-block d-md-none" style=" margin-top: 30%;width: 100px!important;">
+                                    <img src="img/We love your Smile.svg" style="width: 335%; height: 280% ;" >
+                                  </div>
+                              
+                            
+            
+                
+
+        
+    </div>
+    </div>
+
+    </div>
+    <!--Feeling Mobile-->
+    <div class="container-fluid d-block d-sm-none"><br><br>
+    
+        <h1 style="margin-left:5%  ;"  class="hello1">
+            <span class="feeling-cards-title" style=" color:  #640b35 ;font-family: 'Merienda', cursive; margin-left: 3% ;font-size:33px "><i>Feeling</i></span> <span class="feeling-cards-title" style="font-family: 'Merienda', cursive;color:  #640b35; font-size:33px;"><b><i> Cards</i></b></span></span></h1>
+            
+        <div class="row">
+    
+        <div class="col-6 "  style="margin-left: 5%;">
+            
+            
+            <div class="row" style="margin-top: 20%;">
+            <div class="col-8" style="text-align:center; border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 50%; float: right; margin-left: 15%; border-radius: 10px;">
+                <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=love">
+                    <img src="img/feelings-love-svg.svg" alt="bday1"  style=" margin-top:10px ;height:75%; width:90%">
+                    
+                    <div class="  d-block d-md-none" style="position: relative;   left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 100%; margin-top: 5%;  margin-bottom:5%; white-space: nowrap;  ;">Love Cards</div>
+               
+                </a>
+        
+                
+                </div>
+                </div>
+                <div class="row" style="margin-top: 12%;">
+                    <div class="col-8" style="text-align:center; border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right; margin-left: 15%;border-radius: 10px;">
+                        <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=thankyou">
+                            <img src="img/feelings-thankyou-svg.svg" alt="bday1"  style=" margin-top:10% ; height: 75%; width: 90%"><br>
+                            
+                            <div class="d-block d-md-none" style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 80%; margin-top: 5%;  margin-bottom:5%;margin-left:5%">Thank you Cards</div>
+                       
+                        </a>
+            
+                
+                        
+                        </div>
+                        </div>
+                        <div class="row" style="margin-top: 12%;">
+                            <div class="col-8" style="text-align:center; border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right; margin-left: 15%;border-radius: 10px;">
+                                <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=sorry">
+                                    <img src="img/feelings-sorry-svg.svg" alt="bday1"  style=" margin-top:10% ; height: 75%; width:90%"><br>
+                                    
+                                    <div class=" d-block d-md-none" style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 100%; margin-top: 5%;  margin-bottom:5%;  margin-left: 5%;">Sorry Cards</div>
+                                
+                                </a>
+                    
+                        
+                                
+                                </div>
+                                </div>
+                                <div class="row" style="margin-top: 12%;">
+                                    <div class="col-8" style="text-align:center; border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right; margin-left: 15%;border-radius: 10px;">
+                                        <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=congrats">
+                                            <img src="img/feelings-congrats-svg.svg" alt="bday1"  style=" margin-top:10% ; height: 75%; width:90%" ><br>
+                                            
+                                            <div class=" d-block d-md-none"  style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 90%; margin-top: 5%; margin-bottom:5%; margin-left:3% ">Congrats Cards</div>
+                                       
+                                        </a>
+                            
+                            
+                                        </div>
+                                        
+                                        
+                                        </div><br><br><br><br><br><br><br><br>
+                        
+    
+    
+        </div>
+        <div class="col-5" style="margin-right: -8%;" >
+            <div class="row">
+            <img src="img/feelings-svg.svg"  alt="bday" style=" float: left; height:130% ; width: 130%; margin-left:-18%" class="item-img" >
+        </div>
+        <div class="row" style="margin-left:-15% ;margin-top: -14%; margin-right: 8%; ">
+            <div class="col-11" style="text-align:center;  border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right;background-color: white; border-radius: 10px;">
+                <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=weddingwishes">
+                    <img src="img/feelings-weddingwishes-svg.svg" alt="bday1"  style=" margin-top:10px ; height: 85%; width:90%">
+                   
+                    <div class=" d-block d-md-none"  style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 90%; margin-top: 5%; margin-bottom:5%; margin-left: 5%; ">Wedding greetings</div>
+               
+                </a>
+    
+        
+                
+                </div>
+                </div>
+                <div class="row" style="margin-left:-15% ;margin-top: 12%; margin-right: 8%; ">
+                    <div class="col-11" style="text-align:center;  border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right;background-color: white; border-radius: 10px;">
+                        <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=missyou">
+                            <img src="img/feelings-missyou-svg.svg" alt="bday1"  style=" margin-top:10px ; height: 80%; width:85%" >
+                           
+                            <div class=" d-block d-md-none" style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 90%; margin-top: 5%; margin-bottom:5%;">Miss you Cards</div>
+                       
+                        </a>
+            
+                
+                    
+                        </div>
+                        </div>
+                        <div class="row" style="margin-left:-15% ;margin-top: 12%; margin-right: 8%; ">
+                            <div class="col-11" style="text-align:center;  border-radius: 5px; box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.3),-.1px -.1px 10px -5px rgba(0, 0, 0, 0.3); height: 70%; float: right;background-color: white; border-radius: 10px;">
+                                <a href="./cardCategories/Feelings.html?cardCategory=feelings&cardSubCategory=getwellsoon">
+                                    <img src="img/feelings-getwellsoon-svg.svg" alt="bday1"  style=" margin-top:10px ; height:80%; width:85%">
+                                   
+                                    <div class=" d-block d-md-none" style="position: relative;  left: -5px;  color:  #bd1d68 ;font-family: 'Merienda', cursive; font-size: 90%; margin-top: 5%; margin-bottom:5%;">Get Well Soon</div>
+                                
+                                </a>
+                    
+                        
+                            
+                                </div>
+                                </div>
+                               
+                                    
+                                   
+                                  
+                                
+                
+                    
+    
+            
+    
+    
+        </div>
+        </div>
+        <div class="container-fluid d-block">
+            <div class="row prefooter" style="margin-top: -40%;justify-content: center;align-items: center;">
+                <div class="col-6  d-none d-md-block ">
+                    <span style="font-family: 'Satisfy',cursive;font-size:45px;color: #640b35;font-weight:600">We love your smile</span>
+                </div>
+
+                <div class="col-6 d-block d-md-none">
+                    <span style="font-family: 'Satisfy',cursive;font-size:22px;color: #640b35;font-weight:600; white-space: nowrap;">We love your smile</span>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <div class="footer">
+        <div class="container w-100 h-100 m-20" >
+            <div class="row w-100 h-70" id="footer-upper-part">
+                <div class="col-md-6">
+                    <div class="footer-left-part w-100 h-100">
+                        <img src="./img/celebrare-logo.svg" alt="" >
+                        <span>Celebrare</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-right-part w-100 h-100">
+                        <div class="footer-right-part-1">
+                            <span class="title">Cards</span>
+                            <span>E-Cards</span>
+                            <span>Greetings Cards</span>
+                        </div>
+                        <div class="footer-right-part-2">
+                        <span class="title">Category</span>
+                        <span>Birthday Cards</span>
+                        <span>Anniversary Cards</span>
+                        <span>Feeling Cards</span>
+                        </div>
+                        <div class="footer-right-part-3">
+                            <span class="title">Company</span>
+                            <a href="./privacyPolicy.html"><span style="text-decoration: underline;">Privacy Policy</span></a>
+                            <a href="./termsOfUse.html"><span style="text-decoration: underline;">Terms Of Use</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="footer-bottom-part">
+                <div class="footer-bottom-part" >
+                    <span>© Celebrare, Inc.<span>&nbsp;</span><span id="current-year"></span><span>&nbsp;</span>We love your smile.</span> 
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="./js/firebaseUtils.js"></script>
+    <script type="text/javascript" src="./js/lottie.js" ></script>
+    <script src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/login.js"></script>
+    
+    <script >
+
+        // Detect request animation frame
+var scroll = window.requestAnimationFrame ||
+             // IE Fallback
+             function(callback){ window.setTimeout(callback, 1000/60)};
+var elementsToShow = document.querySelectorAll('.show-on-scroll '); 
+
+
+
+function loop() {
+
+  elementsToShow.forEach(function (element) {
+    if (isElementInViewport(element)) {
+      element.classList.add('is-visible');
+    } else {
+      element.classList.remove('is-visible');
+    }
+  });
+
+  scroll(loop);
+}
+
+// Call the loop for the first time
+loop();
+
+// Helper function from: http://stackoverflow.com/a/7557433/274826
+function isElementInViewport(el) {
+  // special bonus for those using jQuery
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0
+      && rect.bottom >= 0)
+    ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    ||
+    (rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
+    </script>
+
+</body>
+</html>

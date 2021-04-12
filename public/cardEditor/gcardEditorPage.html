@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Celebrare</title>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Caveat:wght@700&family=Dancing+Script&family=Fjalla+One&family=Handlee&family=Indie+Flower&family=Italianno&family=Kalam:wght@300&family=Lato:wght@100&family=Lora&family=Pacifico&family=Poppins:wght@300&family=Roboto:wght@100&family=Sacramento&family=Satisfy&family=Seaweed+Script&family=Slabo+13px&family=Ubuntu:wght@300&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Alex+Brush&family=Allura&family=Arizonia&family=Bonbon&family=Bungee+Inline&family=Finger+Paint&family=Great+Vibes&family=Henny+Penny&family=Lovers+Quarrel&family=Meddon&family=Miss+Fajardose&family=Molle:ital@1&family=Monsieur+La+Doulaise&family=Mountains+of+Christmas:wght@700&family=Pacifico&family=Parisienne&family=Quicksand:wght@700&family=Ribeye+Marrow&family=Rouge+Script&family=Sail&family=Vast+Shadow&family=Yesteryear&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"/>
+
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <link type="text/css" rel="stylesheet" href="../css/footer.css" />
+    <link type="text/css" rel="stylesheet" href="../css/gcardEditorPage.css" />
+    
+    <!-- bootstrap-4.3 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- bootstrap-4.3 -->
+
+    <!-- turn -->
+    <script type="text/javascript" src="../js/turn.min.js" ></script>
+    <!-- interact.js -->
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js" ></script>
+    <!-- dom-to-image   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" crossorigin="anonymous"></script>
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+    <!-- firebase -->
+
+    <link rel="icon" href="../img/LOGO5.svg">
+
+  </head>
+
+<body>
+  <div style="width: 100%;height: fit-content;">
+
+    <div class="gcard-preview-screen" id="gcard-preview-screen">
+      
+      <div id="control-bar">
+        <a>
+          <span id="continue-button">
+              CONTINUE
+          </span>
+        </a>
+        <div style="width: fit-content;justify-content: center;display: flex;align-items: center;">
+          <div  class="flipbook-backward-button" id="flipbook-backward-button-0">
+            <img id="prev" src="../img/back button.svg" style="cursor: pointer;"  alt="">
+          </div>
+          <div  class="flipbook-forward-button" id="flipbook-forward-button-0">
+            <img id="next" src="../img/back button.svg" alt="" style="transform: rotate(180deg);cursor: pointer;">
+          </div>
+        </div>
+        <i class="fa fa-times" id="hide-gcard-preview-screen" ></i>
+      </div>
+
+      <div class="container-fluid" id="flipbook-screen-wrapper">
+        <div id="preview-screen-loader-container" >
+          <div id="loader-1"></div>
+        </div>
+        <div  class="flipbook-backward-button" id="flipbook-backward-button-1">
+          <img id="prev1" src="../img/back button.svg" style="cursor: pointer;"  alt="">
+        </div>
+        <div class="row flipbook-screen" >
+            <div class="flipbook-container">
+              <div id="flipbook">
+                <div class="hard" id="flipbook-front-page">
+                  <img
+                    src=""
+                    alt=""
+                    style="height: 100%; width: 100%;"
+                  />
+                </div>
+                <div class="hard" id="flipbook-middle-left-page">
+                  <img src="" alt="" style="height: 100%; width: 100%;"/>
+                </div>
+                <div class="hard" id="flipbook-middle-right-page">
+                  <img src="" alt="" style="height: 100%; width: 100%;"/>
+                </div>
+                <div class="hard" id="flipbook-back-page">
+                  <img
+                    src=""
+                    alt=""
+                    style="height: 100%; width: 100%;"
+                  />
+                </div>
+              </div>
+
+              <div id="flipbook-l">
+                <div class="hard" id="flipbook-front-page-l">
+                  <img
+                    src=""
+                    alt=""
+                    style="height: 100%; width: 100%;"
+                  />
+                </div>
+                <div class="hard" id="flipbook-middle-left-page-l">
+                  <img src="" alt="" style="height: 100%; width: 100%;"/>
+                </div>
+
+                <div class="hard" id="flipbook-middle-right-page-l">
+                  <img src="" alt="" style="height: 100%; width: 100%;"/>
+                </div>
+                <div class="hard" id="flipbook-back-page-l">
+                  <img
+                    src=""
+                    alt=""
+                    style="height: 100%; width: 100%;"
+                  />
+                </div>
+              </div>
+
+
+            </div>
+        </div>
+        <div  class="flipbook-forward-button" id="flipbook-forward-button-1">
+          <img id="next1" src="../img/back button.svg" alt="" style="transform: rotate(180deg);cursor: pointer;">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container-fluid" style="background-color: #f9f9fb;"> 
+      <div class="row header" >
+        <div class="col-6">
+          <div class="logo-container">
+            <img src="../img/BottomLogo.png" alt="" class="logo-image">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="preview-button-container" >
+            <div class="preview-button" id="Preview-Gcard-Button">
+              Preview
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="main-display">
+
+      <div class="row" style="width: 100%;height: 100%;margin: 0;">
+        <div class="col-md-9">
+          <div id="page-control-tab" >
+            <div class="tablink pcb-1" onclick="openPage('Front-Page', this, 'red')" id="defaultOpen" >
+              <img src="../img/front.svg" alt="front-page" style="margin-right: 5px;">
+              Front
+            </div>
+            <div class="tablink pcb-2" onclick="openPage('Inside', this, 'red')" id="open-inside-page-div">
+              <img src="../img/inside.svg" alt="inside-page" style="margin-right: 5px;">
+              Inner
+            </div>
+            <div class="tablink pcb-3" onclick="openPage('Back-Page', this, 'red')">
+              <img src="../img/back.svg" alt="back-page" style="margin-right: 5px;">
+              Back
+            </div>
+          </div>
+
+          <div id="loader-container" style="width: 100%;height: 50vh;display: flex;justify-content: center;align-items: center;">
+            <div id="loader"></div>
+          </div>
+
+          <div id="gcard-editor-window">
+            
+          <div id="Front-Page" class="tabcontent" >
+            <div id="front-page-content" class="page">
+              <img
+                id="card-default-image"
+                alt="card-image"
+                draggable="false"
+                src=""
+              >
+            </div>
+          </div>
+
+          <div id="Inside" class="tabcontent">
+            <div id="inside-page-content">
+              
+              <div id="inside-pages">
+                
+                <div id="layout1" class="labcontent">
+                  <div class="page">
+                    <div class="left-page" >
+                      <div class="text-container">
+                        <div class="inner-block" style="justify-content: center;">
+                            <textarea class="gcard-textarea" id="default-text-input-1" placeholder="Add Text" spellcheck="false" rows="1" ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right-page" >
+                      <div class="text-container">
+                        <div class="inner-block" style="justify-content: center;">
+                          <textarea class="gcard-textarea" id="default-text-input-2"  placeholder="Add Text" spellcheck="false" rows="1"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="layout2" class="labcontent">
+                  <div class="page">
+                    <div class="left-page" >
+                      <div class="image-container image-type-1" style="width: 100%;height: 100%;">
+                        <div class="add-image">
+                          <label for="gcard-image-input-1" style="cursor: pointer;">
+                            <i class="fa fa-camera"></i>
+                            Add Photo
+                          </label>
+                          <input id="gcard-image-input-1" type="file" accept="image/*" style="display: none;"/>
+                        </div>
+                        <div class="image-box">
+                          <i class="fa fa-trash delete-image" ></i>
+                          <img src="" alt="" id="user-image-1" class="gcard-default-image">
+                        </div>  
+                      </div>
+                    </div>
+                    <div class="right-page" >
+                      <div class="text-container">
+                        <div class="inner-block" style="justify-content: center;">
+                          <textarea class="gcard-textarea" id="default-text-input-3" placeholder="Add Text" spellcheck="false" rows="1"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="layout3" class="labcontent">
+                  <div class="page">
+                    <div class="left-page">
+                    <div class="inner-block" style="width: 80%;justify-content: space-around;">
+                      <div class="image-container image-type-1" style="height: 70%;width:100%" >
+                        <div class="add-image">
+                          <label for="gcard-image-input-2" style="cursor: pointer;">
+                            <i class="fa fa-camera"></i>
+                            Add Photo
+                          </label>
+                          <input id="gcard-image-input-2" type="file" accept="image/*" style="display: none;"/>
+                        </div>
+                        <div class="image-box" >
+                          <i class="fa fa-trash delete-image" ></i>
+                          <img src="" alt="" id="user-image-2" class="gcard-default-image">
+                        </div>
+                      </div>
+                      <div class="text-container" style="height: 20%;width: 100%;display: flex; justify-content: center;align-items:center;">
+                        <div class="inner-block" style="height: 100%;width: 100%;display: flex; justify-content: center;align-items:center;">
+                          <textarea class="gcard-textarea" id="default-text-input-4" placeholder="Add Text" spellcheck="false" rows="1" ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="right-page" >
+                      <div class="text-container">
+                        <div class="inner-block" style="justify-content: center;">
+                          <textarea class="gcard-textarea" id="default-text-input-5" placeholder="Add Text" spellcheck="false" rows="1"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                </div>
+
+                <div id="layout4" class="labcontent">
+                  <div class="page">
+                    <div class="left-page" >
+                      <div class="inner-block" style="width: 80%;justify-content: space-around;" >
+                        <div class="image-container image-type-1" style="height: 70%;width: 100%;" >
+                          <div class="add-image">
+                            <label for="gcard-image-input-3" style="cursor: pointer;">
+                              <i class="fa fa-camera"></i>
+                              Add Photo
+                            </label>
+                            <input id="gcard-image-input-3" type="file" accept="image/*" style="display: none;"/>
+                          </div>
+                          <div class="image-box" >
+                            <i class="fa fa-trash delete-image" ></i>
+                            <img src="" alt="" id="user-image-3" class="gcard-default-image">
+                          </div>
+                        </div>
+                        <div class="text-container" style="height: 20%;width: 100%;display: flex; justify-content: center;align-items:center;">
+                          <div class="inner-block" style="height: 100%;width: 100%;display: flex; justify-content: center;align-items:center;">
+                            <textarea class="gcard-textarea" id="default-text-input-6" placeholder="Add Text" spellcheck="false" rows="1"></textarea> 
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="right-page" >
+                      <div class="inner-block" style="width: 80%;justify-content: space-around;" >
+                        <div class="image-container image-type-2" style="height: 70%;width: 100%;" >
+                          <div class="add-image">
+                            <label for="gcard-image-input-4" style="cursor: pointer;">
+                              <i class="fa fa-camera"></i>
+                              Add Photo
+                            </label>
+                            <input id="gcard-image-input-4" type="file" accept="image/*" style="display: none;"/>
+                          </div>
+                          <div class="image-box" >
+                            <i class="fa fa-trash delete-image" ></i>
+                            <img src="" alt="" id="user-image-4" class="gcard-default-image">
+                          </div>
+                        </div>
+                        <div class="text-container" style="height: 20%;width: 100%;display: flex; justify-content: center;align-items:center;">
+                          <div class="inner-block" style="height: 100%;width: 100%;display: flex; justify-content: center;align-items:center;">
+                            <textarea class="gcard-textarea" id="default-text-input-7" placeholder="Add Text" spellcheck="false" rows="1"></textarea>
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="layout5" class="labcontent">
+                  <div class="page">
+                    <div class="left-page" >
+                      <div class="inner-block" style="width: 90%;">
+                        <div class="image-container image-type-1" style="height:40%;width:80%" class="">
+                          <div class="add-image">
+                            <label for="gcard-image-input-5" style="cursor: pointer;">
+                              <i class="fa fa-camera"></i>
+                              Add Photo
+                            </label>
+                            <input id="gcard-image-input-5" type="file" accept="image/*" style="display: none;"/>
+                          </div>
+                          <div class="image-box" >
+                            <i class="fa fa-trash delete-image" ></i>
+                            <img src="" alt="" id="user-image-5" class="gcard-default-image">
+                          </div>
+                        </div>
+                        <div class="text-container" style="height: 8%;width: 80%;display: flex; justify-content: center;align-items:center;">
+                          <div class="inner-block" style="height: 100%;width: 100%;display: flex; justify-content: center;align-items:center;">
+                            <textarea class="gcard-textarea" id="default-text-input-8" placeholder="Add Text" spellcheck="false" rows="1"></textarea>
+                          </div>
+                        </div>
+                      <div class="image-container image-type-2" style="height:40%;width:80%" >
+                        <div class="add-image" >
+                          <label for="gcard-image-input-6" style="cursor: pointer;">
+                            <i class="fa fa-camera"></i>
+                            Add Photo
+                          </label>
+                          <input id="gcard-image-input-6" type="file" accept="image/*" style="display: none;"/>
+                        </div>
+                        <div class="image-box" >
+                          <i class="fa fa-trash delete-image" ></i>
+                          <img src="" alt="" id="user-image-6" class="gcard-default-image">
+                        </div>
+                      </div>
+                      <div class="text-container" style="height: 8%;width: 80%;display: flex; justify-content: center;align-items:center;">
+                        <div class="inner-block" style="height: 100%;width: 100%;display: flex; justify-content: center;align-items:center;">
+                          <textarea class="gcard-textarea" id="default-text-input-9" placeholder="Add Text" spellcheck="false" rows="1"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="right-page" >
+                      <div class="inner-block" style="width: 90%;">
+                        <div class="image-container image-type-3" style="height:40%;width:80%" class="">
+                          <div class="add-image">
+                            <label for="gcard-image-input-7" style="cursor: pointer;">
+                              <i class="fa fa-camera"></i>
+                              Add Photo
+                            </label>
+                            <input id="gcard-image-input-7" type="file" accept="image/*" style="display: none;"/>
+                          </div>
+                          <div class="image-box" >
+                            <i class="fa fa-trash delete-image" ></i>
+                            <img src="" alt="" id="user-image-7" class="gcard-default-image">
+                          </div>
+                        </div>
+                        <div class="text-container" style="height: 8%;width: 80%;display: flex; justify-content: center;align-items:center;">
+                          <div class="inner-block" style="height: 100%;width: 100%;display: flex; justify-content: center;align-items:center;">
+                            <textarea class="gcard-textarea" id="default-text-input-10" placeholder="Add Text" spellcheck="false" rows="1"></textarea>
+                          </div>
+                        </div>
+                      <div class="image-container image-type-4" style="height:40%;width:80%" >
+                        <div class="add-image" >
+                          <label for="gcard-image-input-8" style="cursor: pointer;">
+                            <i class="fa fa-camera"></i>
+                            Add Photo
+                          </label>
+                          <input id="gcard-image-input-8" type="file" accept="image/*" style="display: none;"/>
+                        </div>
+                        <div class="image-box" >
+                          <i class="fa fa-trash delete-image" ></i>
+                          <img src="" alt="" id="user-image-8" class="gcard-default-image">
+                        </div>
+                      </div>
+                      <div class="text-container" style="height: 8%;width: 80%;display: flex; justify-content: center;align-items:center;">
+                        <div class="inner-block" style="height: 100%;width: 100%;display: flex; justify-content: center;align-items:center;">
+                          <textarea class="gcard-textarea" id="default-text-input-11" placeholder="Add Text" spellcheck="false" rows="1"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="layout6" class="labcontent">
+                  <div class="page">
+                    <div class="left-page" >
+                      <div class="inner-block" style="width: 90%; justify-content: space-around;">
+                        <div id="upper-block" style="width: 100%;height: 40%;display: flex;justify-content: space-between;">
+                          <div class="image-container image-type-1" style="width: 50%;height: 100%;" >
+                            <div class="add-image" >
+                              <label for="gcard-image-input-9" style="cursor: pointer;">
+                                <i class="fa fa-camera"></i>
+                                Add Photo
+                              </label>
+                              <input id="gcard-image-input-9" type="file" accept="image/*" style="display: none;"/>
+                            </div>
+                            <div class="image-box" >
+                              <i class="fa fa-trash delete-image" ></i>
+                              <img src="" alt="" id="user-image-9" class="gcard-default-image">
+                            </div>  
+                          </div>
+                          <div class="text-container" style="height: 100%;width: 45%;display: flex; justify-content: center;align-items:center;">
+                            <div class="inner-block" style="height: 100%;width: 100%;display: flex; justify-content: center;align-items:center;">
+                              <textarea class="gcard-textarea" id="default-text-input-12" placeholder="Add Text" spellcheck="false" rows="1"></textarea>
+                            </div>
+                          </div>  
+                        </div>
+                        <div id="middle-block" style="width: 100%;height: 40%;display: flex;justify-content: space-between;">
+                          <div class="image-container image-type-2" style="width: 50%;height: 100%;" >
+                            <div class="add-image" >
+                              <label for="gcard-image-input-10" style="cursor: pointer;">
+                                <i class="fa fa-camera"></i>
+                                Add Photo
+                              </label>
+                              <input id="gcard-image-input-10" type="file" accept="image/*" style="display: none;"/>
+                            </div>
+                            <div class="image-box" >
+                              <i class="fa fa-trash delete-image" ></i>
+                              <img src="" alt="" id="user-image-10"class="gcard-default-image" >
+                            </div>  
+                          </div>
+                          <div class="text-container" style="height: 100%;width: 45%;display: flex; justify-content: center;align-items:center;">
+                            <div class="inner-block" style="height: 100%;width: 100%;display: flex; justify-content: center;align-items:center;">
+                              <textarea class="gcard-textarea" id="default-text-input-13" placeholder="Add Text" spellcheck="false" rows="1"></textarea>
+                            </div>
+                          </div>  
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right-page" >
+                      <div class="text-container">
+                        <div class="inner-block" style="justify-content: center;">
+                          <textarea class="gcard-textarea" id="default-text-input-14" placeholder="Add Text" spellcheck="false" rows="1"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div id="Back-Page" class="tabcontent">
+            <div id="back-page-content" class="page" >
+              <img src="../img/BottomLogo.png" alt="logo">
+            </div>
+          </div>
+        
+          </div>
+
+        </div>
+        <div class="col-md-3 pr-0">
+          <div class="gcard-tool-bar">
+            
+            <div class="desktop-view-tool-box">
+              <div class="tool-add-text tools">
+                <div class="add-text-icon icons">
+                  <img src="../img/addtextsvg.svg" alt="" >
+                </div>
+                Add Text
+              </div>
+              <div class="tool-add-image tools">
+                <label for="image-input">
+                  <div class="add-image-icon icons">
+                    <img src="../img/image-plus.svg" alt="">
+                  </div>
+                  Add Image
+                </label>
+                <input id="image-input" type="file" accept="image/*" style="display: none;"/>
+              </div>
+              <div class="tools" id="tool-change-layout">
+                <div class="change-layout-icon icons">
+                  <img src="../img/changeLayout.svg" alt="" >
+                </div>
+                Change Layout
+              </div>
+            </div>
+
+            <div class="layout-tab-wrapper"> 
+              <div class="layout-tab-title">Layouts :</div>
+              <div class="layout-tab">
+                <div id="layout-tab-content">
+                  <div class="lablinks" onclick="openLayout(event, 'layout1')" >
+                    <div class="layout-preview-button">
+                      <img src="../img/Layoutp4.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="lablinks" onclick="openLayout(event, 'layout2')" >
+                    <div class="layout-preview-button">
+                      <img src="../img/Layoutp6.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="lablinks" onclick="openLayout(event, 'layout3')" id="default">
+                    <div class="layout-preview-button">
+                      <img src="../img/Layoutp3.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="lablinks" onclick="openLayout(event, 'layout4')" >
+                    <div class="layout-preview-button">
+                      <img src="../img/Layoutp1.svg" alt="">                      
+                    </div>
+                  </div>
+                  <div class="lablinks" onclick="openLayout(event, 'layout5')" >
+                    <div class="layout-preview-button">
+                      <img src="../img/Layoutp2.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="lablinks" onclick="openLayout(event, 'layout6')" >
+                    <div class="layout-preview-button">
+                      <img src="../img/Layoutp5.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="layout-tab-wrapper-1">
+              <div class="layout-tab-title">Layouts :</div>
+              <div class="layout-tab-1">
+                <div id="layout-tab-content-1">
+                  <div class="lablinks" onclick="openLayout(event, 'layout2')" id="default-1">
+                    <div class="layout-preview-button">
+                      <img src="../img/Layoutl4.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="lablinks" onclick="openLayout(event, 'layout3')" >
+                    <div class="layout-preview-button">
+                      <img src="../img/Layoutl3.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="lablinks" onclick="openLayout(event, 'layout4')" >
+                    <div class="layout-preview-button">
+                      <img src="../img/Layoutl2.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="lablinks" onclick="openLayout(event, 'layout6')" >
+                    <div class="layout-preview-button">
+                      <img src="../img/Layoutl1.svg" alt="">                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <!-- tools for default card text -->
+            <div class="text-tools" id="customize-text-pop-up-1">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div>
+                    <span class="font-size-title">Size : </span>
+                    <span id="font-size-value-1">20</span>
+                  </div>
+                  <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-1">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-1"></i>
+                    <i class="fa fa-align-center icon" id="icon2-1"></i>
+                    <i class="fa fa-align-right icon" id="icon3-1"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-1">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento',cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-1">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-2">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div>
+                    <span class="font-size-title">Size : </span>
+                    <span id="font-size-value-2">20</span>
+                  </div>
+                  <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-2">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-2"></i>
+                    <i class="fa fa-align-center icon" id="icon2-2"></i>
+                    <i class="fa fa-align-right icon" id="icon3-2"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-2">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento', cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-2">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-3">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div>
+                    <span class="font-size-title">Size : </span>
+                    <span id="font-size-value-3">20</span>
+                  </div>
+                  <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-3">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                    <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-3"></i>
+                    <i class="fa fa-align-center icon" id="icon2-3"></i>
+                    <i class="fa fa-align-right icon" id="icon3-3"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-3">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento',cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-3">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-4">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div>
+                    <span class="font-size-title">Size : </span>
+                    <span id="font-size-value-4">20</span>
+                  </div>
+                  <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-4">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-4"></i>
+                    <i class="fa fa-align-center icon" id="icon2-4"></i>
+                    <i class="fa fa-align-right icon" id="icon3-4"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-4">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento', cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-4">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-5">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div>
+                    <span class="font-size-title">Size : </span>
+                    <span id="font-size-value-5">20</span>
+                  </div>
+                  <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-5">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-5"></i>
+                    <i class="fa fa-align-center icon" id="icon2-5"></i>
+                    <i class="fa fa-align-right icon" id="icon3-5"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-5">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento',cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-5">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-6">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size">
+                  <div> 
+                    <span class="font-size-title">Size : </span>
+                    <span id="font-size-value-6">20</span>
+                  </div>
+                    <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-6">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-6"></i>
+                    <i class="fa fa-align-center icon" id="icon2-6"></i>
+                    <i class="fa fa-align-right icon" id="icon3-6"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-6">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento',cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-6">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-7">
+              
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div> 
+                    <span class="font-size-title">Size : </span>
+                    <span id="font-size-value-7">20</span>
+                  </div>
+                  <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-7">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-7"></i>
+                    <i class="fa fa-align-center icon" id="icon2-7"></i>
+                    <i class="fa fa-align-right icon" id="icon3-7"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-7">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento',cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-7">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-8">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div>
+                    <span class="font-size-title">Size : </span>
+                    <span id="font-size-value-8">20</span>
+                  </div>
+                  <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-8">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-8"></i>
+                    <i class="fa fa-align-center icon" id="icon2-8"></i>
+                    <i class="fa fa-align-right icon" id="icon3-8"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-8">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento',cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-8">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-9">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div> 
+                    <span class="font-size-title">Size :</span>
+                    <span id="font-size-value-9">20</span>
+                  </div>
+                  <input type="range" min="10max="200" value="20"  class="font-size-slider" id="font-size-9">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-9"></i>
+                    <i class="fa fa-align-center icon" id="icon2-9"></i>
+                    <i class="fa fa-align-right icon" id="icon3-9"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-9">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento',cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-9">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-10">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div> 
+                    <span class="font-size-title">Size :</span>
+                    <span id="font-size-value-10">20</span>
+                  </div>
+                    <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-10">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-10"></i>
+                    <i class="fa fa-align-center icon" id="icon2-10"></i>
+                    <i class="fa fa-align-right icon" id="icon3-10"></i>
+                  </div>
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-10">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento',cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-10">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-11">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div > 
+                    <span class="font-size-title">Size : </span>
+                    <span id="font-size-value-11">20</span>
+                  </div>
+                  <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-11">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-11"></i>
+                    <i class="fa fa-align-center icon" id="icon2-11"></i>
+                    <i class="fa fa-align-right icon" id="icon3-11"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-11">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento', cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-11">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-12">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div> 
+                    <span class="font-size-title">Size : </span>
+                    <span id="font-size-value-12">20</span>
+                  </div>
+                  <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-12">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-12"></i>
+                    <i class="fa fa-align-center icon" id="icon2-12"></i>
+                    <i class="fa fa-align-right icon" id="icon3-12"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-12">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento', cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-12">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-13">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div>
+                    <span class="font-size-title">Size : </span>
+                    <span id="font-size-value-13">20</span>
+                  </div>
+                  <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-13">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-13"></i>
+                    <i class="fa fa-align-center icon" id="icon2-13"></i>
+                    <i class="fa fa-align-right icon" id="icon3-13"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-13">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento',cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-13">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+                
+            </div>
+            </div>
+            <div class="text-tools" id="customize-text-pop-up-14">
+              <div class="tools-2">
+                <div class="mobile-view-text-font-size" >
+                  <div> 
+                    <span class="font-size-title">Size : </span>
+                    <span id="font-size-value-14">20</span>
+                  </div>
+                  <input type="range" min="10" max="200" value="20"  class="font-size-slider" id="font-size-14">
+                </div>
+                <div class="mobile-view-text-font-alignment">
+                  <div class="font-alignment-title">
+                    Alignment :
+                  </div>
+                  <div style="width:100%;display:flex;justify-content:space-around">
+                    <i class="fa fa-align-left icon" id="icon1-14"></i>
+                    <i class="fa fa-align-center icon" id="icon2-14"></i>
+                    <i class="fa fa-align-right icon" id="icon3-14"></i>
+                  </div>
+                </div>
+                <div class="font-family-title">
+                  Typefaces : 
+                </div>
+                <div class="mobile-view-text-font-family" id="font-style-14">
+                  <span style="font-family: 'Akronim', cursive;">Akronim</span>
+                  <span style="font-family: 'Alex Brush', cursive;">Alex Brush</span>
+                  <span style="font-family: 'Allura', cursive;">Allura</span>
+                  <span style="font-family: 'Arizonia', cursive;">Arizonia</span>
+                  <span style="font-family: 'Bonbon', cursive;">Bonbon</span>
+                  <span style="font-family: 'Bungee Inline', cursive;">Bungee Inline</span>
+                  <span style="font-family: 'Caveat', cursive;">Caveat</span>
+                  <span style="font-family: 'Dancing Script', cursive;">Dancing Script</span>
+                  <span style="font-family: 'Finger Paint', cursive;">Finger Paint</span>
+                  <span style="font-family: 'Fjalla One', sans-serif;">Fjalla One</span>
+                  <span style="font-family: 'Great Vibes', cursive;">Great Vibes</span>
+                  <span style="font-family: 'Handlee', cursive;">Handlee</span>
+                  <span style="font-family: 'Henny Penny', cursive;">Henny Penny</span>
+                  <span style="font-family: 'Indie Flower', cursive;">Indie Flower</span>
+                  <span style="font-family: 'Italianno', cursive;">Italianno</span>
+                  <span style="font-family: 'Kalam', cursive ;">Kalam Light</span>
+                  <span style="font-family: 'Lato', sans-serif;">Lato Thin</span>
+                  <span style="font-family: 'Lora', serif;">Lora</span>
+                  <span style="font-family: 'Lovers Quarrel', cursive;">Lovers Quarrel</span>
+                  <span style="font-family: 'Meddon', cursive;">Meddon</span>
+                  <span style="font-family: 'Miss Fajardose', cursive;">Miss Fajardose</span>
+                  <span style="font-family: 'Molle', cursive;">Molle</span>
+                  <span style="font-family: 'Monsieur La Doulaise', cursive;">Monsieur La Doulaise</span>
+                  <span style="font-family: 'Mountains of Christmas', cursive;">Mountains of Christmas</span>
+                  <span style="font-family: 'Pacifico', cursive;">Pacifico</span>
+                  <span style="font-family: 'Parisienne', cursive;">Parisienne</span>
+                  <span style="font-family: 'Poppins', sans-serif;">Poppins Light</span>
+                  <span style="font-family: 'Quicksand', sans-serif;">Quicksand</span>
+                  <span style="font-family: 'Ribeye Marrow', cursive;">Ribeye Marrow</span>
+                  <span style="font-family: 'Roboto', sans-serif;">Roboto Thin</span>
+                  <span style="font-family: 'Rouge Script', cursive;">Rouge Script</span>
+                  <span style="font-family: 'Sacramento', cursive;">Sacramento</span>
+                  <span style="font-family: 'Sail', cursive;">Sail</span>
+                  <span style="font-family: 'Satisfy', cursive;">Satisfy</span>
+                  <span style="font-family: 'Seaweed Script', cursive;">Seaweed Script</span>
+                  <span style="font-family: 'Slabo 13px', serif ;">Slabo</span>
+                  <span style="font-family: 'Vast Shadow', cursive;">Vast Shadow</span>
+                  <span style="font-family: 'Yesteryear', cursive;">Yesteryear</span>
+                </div>
+                <div class="mobile-view-text-font-color change-font-color-14">
+                  <div class="font-color-title">
+                    Color :
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_1" style="background-color: #363535"></div>
+                    <div class="color" id="cr_2" style="background-color: #677e39"></div>
+                    <div class="color" id="cr_3" style="background-color: #677e69"></div>
+                    <div class="color" id="cr_4" style="background-color: #686868"></div>
+                    <div class="color" id="cr_5" style="background-color: #8d782f"></div>
+                    <div class="color" id="cr_6" style="background-color: #FFB400"></div>
+                    <div class="color" id="cr_7" style="background-color: #E53D39"></div>
+                    <div class="color" id="cr_8" style="background-color: #2C91DE"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_9" style="background-color: #000000"></div>
+                    <div class="color" id="cr_10" style="background-color: #FFFFFF;border-radius: 50%;border: 1px solid black;"></div>
+                    <div class="color" id="cr_11" style="background-color: #970E65"></div>
+                    <div class="color" id="cr_12" style="background-color: #650633"></div>
+                    <div class="color" id="cr_13" style="background-color: #F3A2A3"></div>
+                    <div class="color" id="cr_14" style="background-color: #D44F70"></div>
+                    <div class="color" id="cr_15" style="background-color: #CA0B15"></div>
+                    <div class="color" id="cr_16" style="background-color: #97070E"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_17" style="background-color: #650508"></div>
+                    <div class="color" id="cr_18" style="background-color: #F35D19"></div>
+                    <div class="color" id="cr_19" style="background-color: #9E5727"></div>
+                    <div class="color" id="cr_20" style="background-color: #D8B571"></div>
+                    <div class="color" id="cr_21" style="background-color: #978454"></div>
+                    <div class="color" id="cr_22" style="background-color: #65320C"></div> 
+                    <div class="color" id="cr_23" style="background-color: #8793D6"></div>
+                    <div class="color" id="cr_24" style="background-color: #866AA5"></div>
+                  </div>
+                  <div class="row" style="height: 30px; display: flex;flex-direction: row;width: 100%;justify-content: space-between;align-items: center;margin:0">
+                    <div class="color" id="cr_25" style="background-color: #552978"></div>
+                    <div class="color" id="cr_26" style="background-color: #1D549F"></div>
+                    <div class="color" id="cr_27" style="background-color: #073464"></div>
+                    <div class="color" id="cr_28" style="background-color: #55B2AE"></div>
+                    <div class="color" id="cr_29" style="background-color: #D5D5D5"></div>
+                    <div class="color" id="cr_30" style="background-color: #FFFAA3"></div>
+                    <div class="color" id="cr_31" style="background-color: #C0CFAF"></div>
+                    <div class="color" id="cr_32" style="background-color: #469E57"></div>
+                  </div>
+                </div>
+                
+            </div>
+            </div>
+            
+            <!-- tools for default card image -->
+            <div class="image-tools" id="customize-image-pop-up-1">
+              <div class="tools-3">
+                <div class="mobile-view-image-size" >
+                  <span id="image-width-value-1">Width: 200px</span>
+                  <input type="range" min="10" max="500" value="200"  class="font-size-slider" id="image-width-1">
+                  <span id="image-height-value-1">Height: 200px</span>
+                  <input type="range" min="10" max="800" value="200"  class="font-size-slider" id="image-height-1">
+                </div>
+                <div class="mobile-view-image-position" >
+                  <span id="image-xposition-value-1">X: 0px</span>
+                  <input type="range" min="0" max="500" value="0"  class="font-size-slider" id="image-xposition-1">
+                  <span id="image-yposition-value-1">Y: 0px</span>
+                  <input type="range" min="0" max="800" value="0"  class="font-size-slider" id="image-yposition-1">
+                </div>
+              </div>
+            </div>
+
+            <div class="image-tools" id="customize-image-pop-up-2">
+              <div class="tools-3">
+                <div class="mobile-view-image-size" >
+                  <span id="image-width-value-2">Width: 200px</span>
+                  <input type="range" min="10" max="500" value="200"  class="font-size-slider" id="image-width-2">
+                  <span id="image-height-value-2">Height: 200px</span>
+                  <input type="range" min="10" max="800" value="200"  class="font-size-slider" id="image-height-2">
+                </div>
+                <div class="mobile-view-image-position" >
+                  <span id="image-xposition-value-2">X: 0px</span>
+                  <input type="range" min="0" max="500" value="0"  class="font-size-slider" id="image-xposition-2">
+                  <span id="image-yposition-value-2">Y: 0px</span>
+                  <input type="range" min="0" max="800" value="0"  class="font-size-slider" id="image-yposition-2">
+                </div>
+              </div>
+            </div>
+
+            <div class="image-tools" id="customize-image-pop-up-3">
+              <div class="tools-3">
+                <div class="mobile-view-image-size" >
+                  <span id="image-width-value-3">Width: 200px</span>
+                  <input type="range" min="10" max="500" value="200"  class="font-size-slider" id="image-width-3">
+                  <span id="image-height-value-3">Height: 200px</span>
+                  <input type="range" min="10" max="800" value="200"  class="font-size-slider" id="image-height-3">
+                </div>
+                <div class="mobile-view-image-position" >
+                  <span id="image-xposition-value-3">X: 0px</span>
+                  <input type="range" min="0" max="500" value="0"  class="font-size-slider" id="image-xposition-3">
+                  <span id="image-yposition-value-3">Y: 0px</span>
+                  <input type="range" min="0" max="800" value="0"  class="font-size-slider" id="image-yposition-3">
+                </div>
+              </div>
+            </div>
+
+            <div class="image-tools" id="customize-image-pop-up-4">
+              <div class="tools-3">
+                <div class="mobile-view-image-size" >
+                  <span id="image-width-value-4">Width: 200px</span>
+                  <input type="range" min="10" max="500" value="200"  class="font-size-slider" id="image-width-4">
+                  <span id="image-height-value-4">Height: 200px</span>
+                  <input type="range" min="10" max="800" value="200"  class="font-size-slider" id="image-height-4">
+                </div>
+                <div class="mobile-view-image-position" >
+                  <span id="image-xposition-value-4">X: 0px</span>
+                  <input type="range" min="0" max="500" value="0"  class="font-size-slider" id="image-xposition-4">
+                  <span id="image-yposition-value-4">Y: 0px</span>
+                  <input type="range" min="0" max="800" value="0"  class="font-size-slider" id="image-yposition-4">
+                </div>
+              </div>
+            </div>
+
+            <div class="image-tools" id="customize-image-pop-up-5">
+              <div class="tools-3">
+                <div class="mobile-view-image-size" >
+                  <span id="image-width-value-5">Width: 200px</span>
+                  <input type="range" min="10" max="500" value="200"  class="font-size-slider" id="image-width-5">
+                  <span id="image-height-value-5">Height: 200px</span>
+                  <input type="range" min="10" max="800" value="200"  class="font-size-slider" id="image-height-5">
+                </div>
+                <div class="mobile-view-image-position" >
+                  <span id="image-xposition-value-5">X: 0px</span>
+                  <input type="range" min="0" max="500" value="0"  class="font-size-slider" id="image-xposition-5">
+                  <span id="image-yposition-value-5">Y: 0px</span>
+                  <input type="range" min="0" max="800" value="0"  class="font-size-slider" id="image-yposition-5">
+                </div>
+              </div>
+            </div>
+
+            <div class="image-tools" id="customize-image-pop-up-6">
+              <div class="tools-3">
+                <div class="mobile-view-image-size" >
+                  <span id="image-width-value-6">Width: 200px</span>
+                  <input type="range" min="10" max="500" value="200"  class="font-size-slider" id="image-width-6">
+                  <span id="image-height-value-6">Height: 200px</span>
+                  <input type="range" min="10" max="800" value="200"  class="font-size-slider" id="image-height-6">
+                </div>
+                <div class="mobile-view-image-position" >
+                  <span id="image-xposition-value-6">X: 0px</span>
+                  <input type="range" min="0" max="500" value="0"  class="font-size-slider" id="image-xposition-6">
+                  <span id="image-yposition-value-6">Y: 0px</span>
+                  <input type="range" min="0" max="800" value="0"  class="font-size-slider" id="image-yposition-6">
+                </div>
+              </div>
+            </div>
+
+            <div class="image-tools" id="customize-image-pop-up-7">
+              <div class="tools-3">
+                <div class="mobile-view-image-size" >
+                  <span id="image-width-value-7">Width: 200px</span>
+                  <input type="range" min="10" max="500" value="200"  class="font-size-slider" id="image-width-7">
+                  <span id="image-height-value-7">Height: 200px</span>
+                  <input type="range" min="10" max="800" value="200"  class="font-size-slider" id="image-height-7">
+                </div>
+                <div class="mobile-view-image-position" >
+                  <span id="image-xposition-value-7">X: 0px</span>
+                  <input type="range" min="0" max="500" value="0"  class="font-size-slider" id="image-xposition-7">
+                  <span id="image-yposition-value-7">Y: 0px</span>
+                  <input type="range" min="0" max="800" value="0"  class="font-size-slider" id="image-yposition-7">
+                </div>
+              </div>
+            </div>
+
+            <div class="image-tools" id="customize-image-pop-up-8">
+              <div class="tools-3">
+                <div class="mobile-view-image-size" >
+                  <span id="image-width-value-8">Width: 200px</span>
+                  <input type="range" min="10" max="500" value="200"  class="font-size-slider" id="image-width-8">
+                  <span id="image-height-value-8">Height: 200px</span>
+                  <input type="range" min="10" max="800" value="200"  class="font-size-slider" id="image-height-8">
+                </div>
+                <div class="mobile-view-image-position" >
+                  <span id="image-xposition-value-8">X: 0px</span>
+                  <input type="range" min="0" max="500" value="0"  class="font-size-slider" id="image-xposition-8">
+                  <span id="image-yposition-value-8">Y: 0px</span>
+                  <input type="range" min="0" max="800" value="0"  class="font-size-slider" id="image-yposition-8">
+                </div>
+              </div>
+            </div>
+
+            <div class="image-tools" id="customize-image-pop-up-9">
+              <div class="tools-3">
+                <div class="mobile-view-image-size" >
+                  <span id="image-width-value-9">Width: 200px</span>
+                  <input type="range" min="10" max="500" value="200"  class="font-size-slider" id="image-width-9">
+                  <span id="image-height-value-9">Height: 200px</span>
+                  <input type="range" min="10" max="800" value="200"  class="font-size-slider" id="image-height-9">
+                </div>
+                <div class="mobile-view-image-position" >
+                  <span id="image-xposition-value-9">X: 0px</span>
+                  <input type="range" min="0" max="500" value="0"  class="font-size-slider" id="image-xposition-9">
+                  <span id="image-yposition-value-9">Y: 0px</span>
+                  <input type="range" min="0" max="800" value="0"  class="font-size-slider" id="image-yposition-9">
+                </div>
+              </div>
+            </div>
+
+            <div class="image-tools" id="customize-image-pop-up-10">
+              <div class="tools-3">
+                <div class="mobile-view-image-size" >
+                  <span id="image-width-value-10">Width: 200px</span>
+                  <input type="range" min="10" max="500" value="200"  class="font-size-slider" id="image-width-10">
+                  <span id="image-height-value-10">Height: 200px</span>
+                  <input type="range" min="10" max="800" value="200"  class="font-size-slider" id="image-height-10">
+                </div>
+                <div class="mobile-view-image-position" >
+                  <span id="image-xposition-value-10">X: 0px</span>
+                  <input type="range" min="0" max="500" value="0"  class="font-size-slider" id="image-xposition-10">
+                  <span id="image-yposition-value-10">Y: 0px</span>
+                  <input type="range" min="0" max="800" value="0"  class="font-size-slider" id="image-yposition-10">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="mobile-view-tool-box">
+    <div class="mobile-view-tool-box-1">
+      <div class="mobile-view-tool-add-text">
+        <img src="../img/addtextsvg.svg" alt="" >
+        Add Text
+      </div>
+      <div class="mobile-view-tool-add-image">
+        <label for="mobile-view-image-input" style="display: flex;flex-direction: column;justify-content: center;align-items: center;width: 100%;height: 100%;margin:0">
+          <img src="../img/image-plus.svg" alt="">
+          Add Image
+        </label>
+          <input id="mobile-view-image-input" type="file" accept="image/*" style="display: none;"/>
+      </div>
+      <div class="mobile-view-tool-change-layout">
+        <img src="../img/changeLayout.svg" alt="" >
+        Layout
+      </div>
+    </div>
+    <div class="mobile-view-tool-box-2">
+          <div class="mobile-view-tool-resize-text mobile-view-editor-tools">
+            <img src="../img/resize.svg" alt="" >
+            Size
+          </div>
+          <div class="mobile-view-tool-font-text mobile-view-editor-tools">
+              <img src="../img/format-font.svg" alt="">
+              Font
+          </div>
+          <div class="mobile-view-tool-color-text mobile-view-editor-tools">
+              <img src="../img/palette.svg" alt="">
+              Color
+          </div>
+          <div class="mobile-view-tool-align-text mobile-view-editor-tools">
+              <img src="../img/format-align-center.svg" alt="">
+              Align
+          </div>
+          <div class="mobile-view-tool-position-text mobile-view-editor-tools">
+              <img src="../img/position.svg" alt="" style="width: 21px;height: 21px;">
+              Shift
+          </div>
+    </div>
+    <div class="mobile-view-tool-box-3">
+          <div class="mobile-view-tool-resize-image mobile-view-editor-tools">
+            <img src="../img/resize.svg" alt="" >
+            Resize
+          </div>
+          <div class="mobile-view-tool-position-image mobile-view-editor-tools">
+            <img src="../img/position.svg" alt="" >
+            Shift
+          </div>
+          <!-- <div class="mobile-view-tool-edit-image mobile-view-editor-tools">
+            <img src="../img/image-edit-outline.svg" alt="">
+            Edit Image
+          </div> -->
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../js/lottie.js" ></script>
+  <script type="text/javascript" src="../js/firebaseUtils.js" ></script>
+  <script type="text/javascript" src="../js/loader.js" ></script>
+  <script type="text/javascript" src="../js/gcardEditorPage.js" ></script>
+
+</body>
+</html>
